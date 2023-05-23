@@ -50,7 +50,70 @@ class Creational_Design_Patterns(Java_Descriptions):
    def get_name(self):
       return self.name
    
+
+class Structural_Design_Patterns(Java_Descriptions):
+   """Handles the Structural Design Patterns"""
+   def __init__(self):
+      super(Java_Descriptions, self).__init__()
+      self.name = 'Structural Design Patterns'
+   
+   def java_design_desc(self):
+      """Returns the description of the Structural Design Patterns"""
+      desc = "Structural design patterns are focused on how"
+      desc += " classes and objects can be composed, to form"
+      desc += " larger structures. (Simplifies the structure by"
+      desc += " identifying the relationships."
+      return desc
+   
+   def types_of_patterns(self):
+      """Returns the patterns"""
+      types='• Adapter Pattern\n'
+      types+='• Bridge Pattern\n'
+      types+='• Composite Pattern\n'
+      types+='• Decorator Pattern\n'
+      types+='• Facade Pattern\n'
+      types+='• Flyweight Pattern\n'
+      types+='• proxy Pattern'
+      return types
+   
+   def get_name(self):
+      return self.name
+   
+   
+   
+class Behavioral_Design_Patterns(Java_Descriptions):
+   """Handles the Behavioral Design Patterns"""
+   def __init__(self):
+      super(Java_Descriptions, self).__init__()
+      self.name = 'Behavioral Design Patterns'
       
+   def java_design_desc(self):
+      """Returns the description of Behavioral Design Patterns"""
+      desc = "Behavioral design patterns are concerned with the "
+      desc += "interaction and responsibility of objects."
+      desc += "With structural design patterns, the interaction "
+      desc += " between the objects should be in a way they can easily "
+      desc += " communicate with each other and be loosely coupled."
+      return desc
+   
+   def types_of_patterns(self):
+      """Returns the patterns"""
+      types='• Chain of Responsibility Pattern\n'
+      types+='• Command Pattern\n'
+      types+='• Interpreter Pattern\n'
+      types+='• Iterator Pattern\n'
+      types+='• Mediator Pattern\n'
+      types+='• Memento Pattern\n'
+      types+='• Observer Pattern\n'
+      types+='• State Pattern\n'
+      types+='• Strategy Pattern\n'
+      types+='• Template Pattern\n'
+      types+='• Visitor Pattern\n'
+      types+='• Null Object'      
+      return types
+   
+   def get_name(self):
+      return self.name      
 
 # All screens
 class MainScreen(Screen):
@@ -60,6 +123,8 @@ class MainScreen(Screen):
    def on_enter(self, *args):
       # Backdrop
       self.bk_drop = MDFloatLayout()
+      self.bk_drop.size_hint_y=None
+      self.bk_drop.height=900
 
 
       # Title Layout
@@ -87,13 +152,13 @@ class MainScreen(Screen):
       self.back_btn.icon_color=[ 1, 1, 1, 1 ]
       self.title_lout.add_widget(self.back_btn)
       
-   #   # Scroll View
-   #   self.view=ScrollView()
-   #   self.view.size_hint_y=.77
-   #   self.view.scroll_y=0
-   #   self.view.pos_hint={"x":0, "y": .116}
-   #   self.view.do_scroll_x=False
-   #   self.view.do_scroll_y=False
+      # Scroll View
+      self.view=ScrollView()
+      self.view.size_hint_y=.77
+      self.view.scroll_y=0
+      self.view.pos_hint={"x":0, "y": .116}
+      self.view.do_scroll_x=False
+      self.view.do_scroll_y=True
 
       
    #   # Layout within the Scroll View
@@ -114,34 +179,25 @@ class MainScreen(Screen):
       self.desc_label.text = str(Java_Descriptions().java_design_desc())
       self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
       self.desc_label.halign='center'
-      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.8}
+      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.95}
       self.desc_label.font_size='20sp'
       
       self.bk_drop.add_widget(self.desc_label)
-      
-      self.ds_1 = MDLabel(
-         text='• Creational Design Pattern\n' +
+            
+      self.insert_text('• Creational Design Pattern\n' +
               '• Structural Design Pattern\n' +
-              '• Behavioral Design Pattern',
-         halign='center',
-         pos_hint={'center_x': 0.5, 'center_y' : 0.7},
-         text_color=[23/255, 23/255, 23/255, 1 ],
-         font_size='10sp'
-      )
-      self.bk_drop.add_widget(self.ds_1)
+              '• Behavioral Design Pattern', '10sp', 0.5, 0.925)
+      self.insert_text('Creational Design Pattern\n', '20sp', 0.5, 0.86, 'H5')
+      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.84)
+      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.78)
       
-      self.ds_2 = MDLabel(
-         text='Creational Design Pattern\n',
-         halign='center',
-         pos_hint={'center_x': 0.5, 'center_y' : 0.6},
-         text_color=[23/255, 23/255, 23/255, 1 ],
-         font_size='20sp'
-      )
-      self.bk_drop.add_widget(self.ds_2)
-      
-      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.5)
-      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.34)
+      self.insert_text(Structural_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.705, 'H5')
+      self.insert_text(Structural_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.69)
+      self.insert_text(Structural_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.64)
 
+      self.insert_text(Behavioral_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.56, 'H5')
+      self.insert_text(Behavioral_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.54)
+      self.insert_text(Behavioral_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.46)
 
       """
       self.ds_2 = MDLabel(
@@ -156,19 +212,22 @@ class MainScreen(Screen):
       
       # Adding the widgets
       # self.view.add_widget(self.main_lout)
-      self.bk_drop.add_widget(self.title_lout)
-      self.add_widget(self.bk_drop)
+      self.add_widget(self.title_lout)
+      self.view.add_widget(self.bk_drop)
+      self.add_widget(self.view)
       
       return self.bk_drop   
       
 
-   def insert_text(self, text, font_size, x, y):
+   def insert_text(self, text, font_size, x, y, font_style='Body1'):
+      """Inserts an MDLabel to the backdrop."""
       self.bk_drop.add_widget(MDLabel(
          text=str(text),
          halign='center',
          pos_hint={'center_x': x ,'center_y' : y},
          text_color=[23/255, 23/255, 23/255, 1 ],
-         font_size=font_size
+         font_size=font_size,
+         font_style=font_style
       ))      
    
 
