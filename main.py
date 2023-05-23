@@ -3,6 +3,10 @@
 # Mitchell Martin
 # 05/15/2023
 
+# Constants
+WHITE = [ 1, 1, 1, 1 ]
+COLOR_1 = { 0/255, 72/255, 186/255, 1 }
+
 from mods import *
 from bldr import *
 
@@ -131,7 +135,7 @@ class MainScreen(Screen):
       self.title_lout = MDFloatLayout()
       self.title_lout.size_hint_y=.11
       self.title_lout.pos_hint={ "center_y" : .95 }
-      self.title_lout.md_bg_color={ 0/255, 72/255, 186/255, 1 }
+      self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
       self.title_label.text='Object Oriented Programming'
@@ -140,8 +144,6 @@ class MainScreen(Screen):
       self.title_label.font_size='25sp'
       self.title_label.theme_text_color='Custom'
       self.title_label.text_color={ 1, 1, 1, 1 }
-      
-      
       self.title_lout.add_widget(self.title_label)
       
       self.back_btn=MDIconButton()
@@ -151,6 +153,30 @@ class MainScreen(Screen):
       self.back_btn.theme_icon_color='Custom'
       self.back_btn.icon_color=[ 1, 1, 1, 1 ]
       self.title_lout.add_widget(self.back_btn)
+      
+      
+      # Toolbar Layout
+      self.tool_lout = MDFloatLayout()
+      self.tool_lout.size_hint_y=.11
+      self.tool_lout.pos_hint={'center_y': .05}
+      self.tool_lout.md_bg_color=COLOR_1
+         
+      # Home Button
+      self.home_btn=MDIconButton()
+      self.home_btn.icon='home'
+      self.home_btn.pos_hint={'center_x': .5, 'center_y': .5}
+      self.home_btn.theme_icon_color='Custom'
+      self.home_btn.icon_color=WHITE
+      self.tool_lout.add_widget(self.home_btn)
+      
+      # Back Button
+      self.back_btn_2=MDIconButton()
+      self.back_btn_2.icon='backburger'
+      self.back_btn_2.theme_icon_color='Custom'
+      self.back_btn_2.icon_color=WHITE
+      self.back_btn_2.pos_hint={'center_x': .2, 'center_y': .5}
+      self.tool_lout.add_widget(self.back_btn_2)
+      
       
       # Scroll View
       self.view=ScrollView()
@@ -184,20 +210,22 @@ class MainScreen(Screen):
       
       self.bk_drop.add_widget(self.desc_label)
             
+      OFFSET=1.5
+      
       self.insert_text('• Creational Design Pattern\n' +
               '• Structural Design Pattern\n' +
-              '• Behavioral Design Pattern', '10sp', 0.5, 0.925)
-      self.insert_text('Creational Design Pattern\n', '20sp', 0.5, 0.86, 'H5')
-      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.84)
-      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.78)
+              '• Behavioral Design Pattern', '10sp', 0.5,  0.95 - (0.03 * OFFSET))
+      self.insert_text('Creational Design Pattern\n', '20sp', 0.5, 0.95 - (0.1 * OFFSET), 'H5')
+      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5,  0.95 - (0.13 * OFFSET))
+      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5,  0.95 - (0.21 * OFFSET))
       
-      self.insert_text(Structural_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.705, 'H5')
-      self.insert_text(Structural_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.69)
-      self.insert_text(Structural_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.64)
+      self.insert_text(Structural_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.30 * OFFSET), 'H5')
+      self.insert_text(Structural_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.325 * OFFSET))
+      self.insert_text(Structural_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.363 * OFFSET))
 
-      self.insert_text(Behavioral_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.56, 'H5')
-      self.insert_text(Behavioral_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.54)
-      self.insert_text(Behavioral_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.46)
+      self.insert_text(Behavioral_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.4 * OFFSET), 'H5')
+      self.insert_text(Behavioral_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.45 * OFFSET))
+      self.insert_text(Behavioral_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.5 * OFFSET))
 
       """
       self.ds_2 = MDLabel(
@@ -215,6 +243,7 @@ class MainScreen(Screen):
       self.add_widget(self.title_lout)
       self.view.add_widget(self.bk_drop)
       self.add_widget(self.view)
+      self.add_widget(self.tool_lout)
       
       return self.bk_drop   
       
