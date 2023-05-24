@@ -280,16 +280,33 @@ class OOP_Screen(Screen):
       self.bk_drop.height=1300
 
       # Screen Grid
-      self.grid=MDBoxLayout()
-      self.grid.size_hint_y=.13
+      self.grid=MDGridLayout()
+      self.grid.size_hint_y=.99
       self.grid.cols=2
       self.grid.padding=dp(15)
       self.grid.spacing=dp(15)
 
-      self.f=ElementCard()
-      self.f.text='hey'
+      self.ov_c=ElementCard()
+      self.ov_c.text='Overview'
+      self.fp_c=ElementCard()
+      self.fp_c.text='Factory Pattern'
+      self.ap_c=ElementCard()
+      self.ap_c.text='Abstract Pattern'
+      self.sp_c=ElementCard() 
+      self.sp_c.text='Singleton Pattern'
+      self.pp_c=ElementCard()
+      self.pp_c.text='Prototype Pattern'
+      self.bp_c=ElementCard()
+      self.bp_c.text='Builder Pattern'
+      self.op_p=ElementCard()
+      self.op_p.text='Object Pool Pattern'
 
-      self.grid.add_widget(self.f)
+      self.grid.add_widget(self.ov_c)
+      self.grid.add_widget(self.fp_c)
+      self.grid.add_widget(self.ap_c)
+      self.grid.add_widget(self.sp_c)
+      self.grid.add_widget(self.pp_c)
+      self.grid.add_widget(self.op_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout
