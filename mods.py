@@ -53,6 +53,6 @@ from kivy.uix.recycleview.views import RecycleDataViewBehavior
 from kivy.uix.widget import Widget
 from kivy_garden.mapview import MapView
 from kivy_garden.mapview import MapMarkerPopup
-
+from kivymd.uix.card import MDCard
 
 username = None

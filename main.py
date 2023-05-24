@@ -120,7 +120,7 @@ class Behavioral_Design_Patterns(Java_Descriptions):
       return self.name      
 
 # All screens
-class MainScreen(Screen):
+class OverviewScreen(Screen):
    def __init__(self, **kw):
       super().__init__(**kw)
       
@@ -128,7 +128,7 @@ class MainScreen(Screen):
       # Backdrop
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=900
+      self.bk_drop.height=1300
 
 
       # Title Layout
@@ -138,7 +138,7 @@ class MainScreen(Screen):
       self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
-      self.title_label.text='Object Oriented Programming'
+      self.title_label.text='Design Patterns Overview'
       self.title_label.pos_hint={'center_y': .5}
       self.title_label.halign='center'
       self.title_label.font_size='25sp'
@@ -152,9 +152,161 @@ class MainScreen(Screen):
       self.back_btn.halign='left'
       self.back_btn.theme_icon_color='Custom'
       self.back_btn.icon_color=[ 1, 1, 1, 1 ]
+      self.back_btn.bind(on_press=self.go_home) # CHANGE THIS
+
       self.title_lout.add_widget(self.back_btn)
       
       
+      # Toolbar Layout
+      self.tool_lout = MDFloatLayout()
+      self.tool_lout.size_hint_y=.11
+      self.tool_lout.pos_hint={'center_y': .05}
+      self.tool_lout.md_bg_color=COLOR_1
+         
+      # Home Button
+      self.home_btn=MDIconButton()
+      self.home_btn.icon='home'
+      self.home_btn.pos_hint={'center_x': .5, 'center_y': .5}
+      self.home_btn.theme_icon_color='Custom'
+      self.home_btn.icon_color=WHITE
+      self.tool_lout.add_widget(self.home_btn)
+      
+      # Back Button
+      self.back_btn_2=MDIconButton()
+      self.back_btn_2.icon='backburger'
+      self.back_btn_2.theme_icon_color='Custom'
+      self.back_btn_2.icon_color=WHITE
+      self.back_btn_2.pos_hint={'center_x': .2, 'center_y': .5}
+      self.back_btn_2.bind(on_press=self.go_home) # CHANGE THIS
+      self.tool_lout.add_widget(self.back_btn_2)
+      
+      
+      # Scroll View
+      self.view=ScrollView()
+      self.view.size_hint_y=.77
+      self.view.scroll_y=1
+      self.view.pos_hint={"x":0, "y": .116}
+      self.view.do_scroll_x=False
+      self.view.do_scroll_y=True
+
+      
+   #   # Layout within the Scroll View
+   #   self.main_lout=MDBoxLayout()
+   #   self.main_lout.size_hint_y=None
+   #   self.main_lout.height=2000
+   #   self.main_lout.width=self.width
+   #   self.main_lout.adaptive_size=True
+   #   self.main_lout.size_hint=[ None, None ]
+   #   self.main_lout.pos_hint={'top' : 10}
+   #   self.main_lout.cols=1
+   #   self.main_lout.spacing=3
+      
+      
+
+      # Description Label
+      self.desc_label = MDLabel()
+      self.desc_label.text = str(Java_Descriptions().java_design_desc())
+      self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
+      self.desc_label.halign='center'
+      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.97}
+      self.desc_label.font_size='20sp'
+      
+      self.bk_drop.add_widget(self.desc_label)
+            
+      OFFSET=1.2
+      
+      self.insert_text('• Creational Design Pattern\n' +
+              '• Structural Design Pattern\n' +
+              '• Behavioral Design Pattern', '10sp', 0.5,  0.95 - (0.03 * OFFSET))
+      self.insert_text('Creational Design Pattern\n', '20sp', 0.5, 0.95 - (0.1 * OFFSET), 'H5')
+      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5,  0.95 - (0.13 * OFFSET))
+      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5,  0.95 - (0.21 * OFFSET))
+      
+      self.insert_text(Structural_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.30 * OFFSET), 'H5')
+      self.insert_text(Structural_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.325 * OFFSET))
+      self.insert_text(Structural_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.39 * OFFSET))
+
+      self.insert_text(Behavioral_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.49 * OFFSET), 'H5')
+      self.insert_text(Behavioral_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.525 * OFFSET))
+      self.insert_text(Behavioral_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.653 * OFFSET))
+
+      """
+      self.ds_2 = MDLabel(
+         text=str(Creational_Design_Patterns().types_of_patterns()),
+         halign='center',
+         pos_hint={'center_x': 0.5, 'center_y': 0.6},
+         text_color=[23/255, 23/255, 23/55, 1 ],
+         font_size='10sp'
+      )
+      self.bk_drop.add_widget(self.ds_2)
+      """
+      
+      # Adding the widgets
+      # self.view.add_widget(self.main_lout)
+      self.add_widget(self.title_lout)
+      self.view.add_widget(self.bk_drop)
+      self.add_widget(self.view)
+      self.add_widget(self.tool_lout)
+      
+      return self.bk_drop   
+      
+   def go_home(self, obj):
+      self.manager.current='oop'
+      self.manager.transition.direction='right'
+
+   def insert_text(self, text, font_size, x, y, font_style='Body1'):
+      """Inserts an MDLabel to the backdrop."""
+      self.bk_drop.add_widget(MDLabel(
+         text=str(text),
+         halign='center',
+         pos_hint={'center_x': x ,'center_y' : y},
+         text_color=[23/255, 23/255, 23/255, 1 ],
+         font_size=font_size,
+         font_style=font_style
+      ))      
+   
+class ElementCard(MDCard):
+   pass
+
+
+
+
+class OOP_Screen(Screen):
+   def __init__(self, **kw):
+      super().__init__(**kw)
+      # Backdrop
+      self.bk_drop = MDFloatLayout()
+      self.bk_drop.size_hint_y=None
+      self.bk_drop.height=1300
+
+      # Screen Grid
+      self.grid=MDBoxLayout()
+      self.grid.size_hint_y=.13
+      self.grid.cols=2
+      self.grid.padding=dp(15)
+      self.grid.spacing=dp(15)
+
+      self.f=ElementCard()
+      self.f.text='hey'
+
+      self.grid.add_widget(self.f)
+      self.bk_drop.add_widget(self.grid)
+
+      # Title Layout
+      self.title_lout = MDFloatLayout()
+      self.title_lout.size_hint_y=.11
+      self.title_lout.pos_hint={ "center_y" : .95 }
+      self.title_lout.md_bg_color=COLOR_1
+      # Label for Title
+      self.title_label=Label()
+      self.title_label.text='Object Oriented Programming Design Patterns'
+      self.title_label.pos_hint={'center_y': .5}
+      self.title_label.halign='center'
+      self.title_label.font_size='25sp'
+      self.title_label.theme_text_color='Custom'
+      self.title_label.text_color={ 1, 1, 1, 1 }
+      self.title_lout.add_widget(self.title_label)
+
       # Toolbar Layout
       self.tool_lout = MDFloatLayout()
       self.tool_lout.size_hint_y=.11
@@ -181,88 +333,16 @@ class MainScreen(Screen):
       # Scroll View
       self.view=ScrollView()
       self.view.size_hint_y=.77
-      self.view.scroll_y=0
+      self.view.scroll_y=1
       self.view.pos_hint={"x":0, "y": .116}
       self.view.do_scroll_x=False
       self.view.do_scroll_y=True
-
-      
-   #   # Layout within the Scroll View
-   #   self.main_lout=MDBoxLayout()
-   #   self.main_lout.size_hint_y=None
-   #   self.main_lout.height=2000
-   #   self.main_lout.width=self.width
-   #   self.main_lout.adaptive_size=True
-   #   self.main_lout.size_hint=[ None, None ]
-   #   self.main_lout.pos_hint={'top' : 10}
-   #   self.main_lout.cols=1
-   #   self.main_lout.spacing=3
-      
       
 
-      # Description Label
-      self.desc_label = MDLabel()
-      self.desc_label.text = str(Java_Descriptions().java_design_desc())
-      self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
-      self.desc_label.halign='center'
-      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.95}
-      self.desc_label.font_size='20sp'
-      
-      self.bk_drop.add_widget(self.desc_label)
-            
-      OFFSET=1.5
-      
-      self.insert_text('• Creational Design Pattern\n' +
-              '• Structural Design Pattern\n' +
-              '• Behavioral Design Pattern', '10sp', 0.5,  0.95 - (0.03 * OFFSET))
-      self.insert_text('Creational Design Pattern\n', '20sp', 0.5, 0.95 - (0.1 * OFFSET), 'H5')
-      self.insert_text(Creational_Design_Patterns().java_design_desc(), '20sp', 0.5,  0.95 - (0.13 * OFFSET))
-      self.insert_text(Creational_Design_Patterns().types_of_patterns(), '10sp', 0.5,  0.95 - (0.21 * OFFSET))
-      
-      self.insert_text(Structural_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.30 * OFFSET), 'H5')
-      self.insert_text(Structural_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.325 * OFFSET))
-      self.insert_text(Structural_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.363 * OFFSET))
-
-      self.insert_text(Behavioral_Design_Patterns().get_name() + '\n', '10sp', 0.5, 0.95 - (0.4 * OFFSET), 'H5')
-      self.insert_text(Behavioral_Design_Patterns().java_design_desc(), '20sp', 0.5, 0.95 - (0.45 * OFFSET))
-      self.insert_text(Behavioral_Design_Patterns().types_of_patterns(), '10sp', 0.5, 0.95 - (0.5 * OFFSET))
-
-      """
-      self.ds_2 = MDLabel(
-         text=str(Creational_Design_Patterns().types_of_patterns()),
-         halign='center',
-         pos_hint={'center_x': 0.5, 'center_y': 0.6},
-         text_color=[23/255, 23/255, 23/55, 1 ],
-         font_size='10sp'
-      )
-      self.bk_drop.add_widget(self.ds_2)
-      """
-      
-      # Adding the widgets
-      # self.view.add_widget(self.main_lout)
       self.add_widget(self.title_lout)
       self.view.add_widget(self.bk_drop)
       self.add_widget(self.view)
       self.add_widget(self.tool_lout)
-      
-      return self.bk_drop   
-      
-
-   def insert_text(self, text, font_size, x, y, font_style='Body1'):
-      """Inserts an MDLabel to the backdrop."""
-      self.bk_drop.add_widget(MDLabel(
-         text=str(text),
-         halign='center',
-         pos_hint={'center_x': x ,'center_y' : y},
-         text_color=[23/255, 23/255, 23/255, 1 ],
-         font_size=font_size,
-         font_style=font_style
-      ))      
-   
-
-
-class OOP_Screen(Screen):
-   pass
 
 # Screen Manager
 # Handles all the screens
@@ -271,45 +351,50 @@ class OOP_Screen(Screen):
 app_build = """
 
 ScreenManager:
-   MainScreen:
+   OverviewScreen:
    OOP_Screen:
    
-<MainScreen>
+<OverviewScreen>
    name: 'main'
    
 <OOP_Screen>
    name: 'oop'
   
-<ElementCard@MDCard>
+<ElementCard@MDCard>:
    id: try
    size_hint_y: None
    padding: dp(20)
-   radius: dp(25)
-   icon: ''
-   text: ''
-   md_bg_color: [ 0/255, 72/255, 186/255, 1 ]
+   radius:dp(25)
+   icon:''
+   icon_size: dp(30)
+   image:''
+   text:""
+   md_bg_color: [ 196/255, 255/255, 215/255, 1 ]
    theme_text_color: "Custom"
-   text_color: [ 1, 1, 1, 1 ]
+   text_color: 240/255, 240/255, 240/255, 1
    ripple_behavior: True
    subtext: ''
    items_remaining: ''
-   height: dp(175)
-   oritentation: 'vertical'
+   height:dp(175)
+   orientation: 'vertical'
    Image:
       source:root.image
       width: 250
       size_hint_y: None
       padding: dp(10)
    MDLabel:
-      halign: 'center'
-      text: 0, 0, 0, 1
-   MDLabel:
-      halign: 'center'
+      halign: "center"
+      valign: "bottom"
       text: root.text
-      font_size: 'H6'
+      theme_text_color: "Custom"
+      text_color: 0, 0, 0, 1
    MDLabel:
-      halign: 'center'
-      text: root.items_remaining    
+      halign: "center"
+      text: root.subtext
+      font_style:"H6"
+   MDLabel:
+      halign: "center"
+      text: root.items_remaining  
 """
 
 
