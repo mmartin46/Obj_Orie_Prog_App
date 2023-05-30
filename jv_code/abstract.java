@@ -1,4 +1,5 @@
 
+
 // Create a Bank Interface
 interface Bank {
    String getBankName();
@@ -26,17 +27,6 @@ class SmallBank implements Bank {
       return BANK_NAME;
    }
 }
-class MediumBank implements Bank {
-   private final String BANK_NAME;
-   public MediumBank() {
-      BANK_NAME = "MediumBank";
-   }
-
-   public String getBankName() {
-      return BANK_NAME;
-   }
-}
-
 
 // Create the Loan Abstract Class
 abstract class Loan {
@@ -73,4 +63,42 @@ abstract class AbstractFactory {
    public abstract Loan getLoan(String loan);
 }
 
+// Create the factory classes that inherit AbstractFactory
+// class to generate the object of concrete class based
+// on given information.
+class BankFactory extends AbstractFactory {
+   public Bank getBank(String bank) {
+      if (bank == null) {
+         return null;
+      }
+      if (bank.equalsIgnoreCase("BIG")) {
+         return new BigBank();
+      } else if (bank.equalsIgnoreCase("SMALL")) {
+         return new SmallBank();
+      }
+      return null;
+   }
+
+   public Loan getLoan(String loan) {
+      return null;
+   }
+}
+class LoanFactory extends AbstractFactory {
+   public Bank getBank(String bank) {
+      return null;
+   }
+
+   public Loan getLoan(String loan) {
+      if (loan == null) {
+         return null;
+      }
+
+      if (loan.equalsIgnoreCase("HOME")) {
+         return new HomeLoan();
+      } else if (loan.equalsIgnoreCase("BUSINESS")) {
+         return new BusinessLoan();
+      }
+      return null;
+   }
+}
 
