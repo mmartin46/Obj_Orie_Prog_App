@@ -13,9 +13,8 @@ from screens.factory import *
 class ElementCard(MDCard):
    pass
 
-
-
-
+# Describes the object oriented
+# programming overview.
 class OOP_Screen(Screen):
    def __init__(self, **kw):
       super().__init__(**kw)
@@ -125,9 +124,7 @@ class OOP_Screen(Screen):
    def on_leave(self, *args):
       self.clear_widgets()      
 
-# Screen Manager
-# Handles all the screens
-
+# The Main Application object
 class MainApp(MDApp):
    def build(self):
       self.root_widget = Builder.load_string(app_build)

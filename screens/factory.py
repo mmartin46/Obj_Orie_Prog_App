@@ -139,3 +139,5 @@ class FactoryScreen(Screen):
       ))   
    def on_leave(self, *args):
       self.clear_widgets()
+      
+      
