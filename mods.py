@@ -54,4 +54,6 @@ from kivy.uix.widget import Widget
 from kivy_garden.mapview import MapView
 from kivy_garden.mapview import MapMarkerPopup
 from kivymd.uix.card import MDCard
-
+from kivy.uix.image import Image, AsyncImage
+import os
+os.environ['KIVY_IMAGE'] = 'pil'
