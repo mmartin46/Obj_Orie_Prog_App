@@ -9,7 +9,9 @@ from bldr import *
 from screens.overview import *
 from screens.factory import *
 
-   
+
+# Used for the icons on the main
+# screen.
 class ElementCard(MDCard):
    pass
 
