@@ -87,10 +87,10 @@ class FactoryScreen(Screen):
 
       # Description Label
       self.desc_label = MDLabel()
-      self.desc_label.text = str(Factory_Method_Pattern().java_design_desc())
+      self.desc_label.text = str(FactoryDesc().java_design_desc())
       self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
       self.desc_label.halign='center'
-      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.97}
+      self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.95}
       self.desc_label.font_size='20sp'
       
       self.bk_drop.add_widget(self.desc_label)

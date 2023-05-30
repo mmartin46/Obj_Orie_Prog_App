@@ -7,6 +7,7 @@
 from mods import *
 from bldr import *
 from screens.overview import *
+from screens.factory import *
 
    
 class ElementCard(MDCard):
@@ -34,9 +35,10 @@ class OOP_Screen(Screen):
 
       self.ov_c=ElementCard()
       self.ov_c.text='Overview'
-      self.ov_c.bind(on_press=self.trans_screen)
+      self.ov_c.bind(on_press=self.trans_main_screen)
       self.fp_c=ElementCard()
       self.fp_c.text='Factory Pattern'
+      self.fp_c.bind(on_press=self.trans_fact_screen)
       self.ap_c=ElementCard()
       self.ap_c.text='Abstract Pattern'
       self.sp_c=ElementCard() 
@@ -112,8 +114,12 @@ class OOP_Screen(Screen):
       self.add_widget(self.view)
       self.add_widget(self.tool_lout)
 
-   def trans_screen(self, obj):
+   def trans_main_screen(self, obj):
       self.manager.current='main'
+      self.manager.transition.direction='left'
+
+   def trans_fact_screen(self, obj):
+      self.manager.current='fmp'
       self.manager.transition.direction='left'
       
    def on_leave(self, *args):

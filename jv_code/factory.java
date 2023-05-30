@@ -1,55 +1,58 @@
-// Isaiah 40:31
 
-// Create a Plan abstract class
-import java.io.*;
-abstract class Plan {
-   protected double rate;
-   abstract void getRate();
 
-   public void calculateBill(int units) {
-      System.out.println(units * rate);
+// Create a Book abstract class
+abstract class Book {
+   protected double price;
+   abstract void getPrice();
+
+   public void calculateTotal(int quantity) {
+      System.out.println(quantity * price);
    }
 }
 
-
-
-// Create the concrete classes that extends
-// Plan abstract class.
-class DomesticPlan extends Plan {
+// Create the concrete classes than
+// extends the Book abstract class
+class RedBook extends Book {
    @Override
-   public void getRate() {
-      rate = 3.50;
+   public void getPrice() {
+      price = 3.00;
    }
 }
-class CommercialPlan extends Plan {
+class BlackBook extends Book {
    @Override
-   public void getRate() {
-      rate = 7.50;
+   public void getPrice() {
+      price = 2.00;
    }
 }
-class InstitutionalPlan extends Plan {
+class BlueBook extends Book {
    @Override
-   public void getRate() {
-      rate = 5.50;
+   public void getPrice() {
+      price = 9.00;
    }
 }
 
-// Create a GetPlanFactory to generate object
+// Create a GetBookFactory
+// to generate an object
 // based on given information.
-class GetPlanFactory {
-   
-   public Plan getPlan(String planType) {
-      if (planType == null) {
+class GetBookFactory {
+   public Book getBook(String bookType) {
+      if (bookType == null) {
          return null;
       }
 
-      if (planType.equalsIgnoreCase("DOMESTICPLAN")) {
-         return new DomesticPlan();
+      if (bookType.equalsIgnoreCase("RED")) {
+         return new RedBook();
       }
-      else if (planType.equalsIgnoreCase("INSTITUTIONALPLAN")) {
-         return new InstitutionalPlan();
+      else if (bookType.equalsIgnoreCase("BLACK")) {
+         return new BlackBook();
+      }
+      else if (bookType.equalsIgnoreCase("BLUE")) {
+         return new BlueBook();
       }
       return null;
    }
 }
+
+
+
 
