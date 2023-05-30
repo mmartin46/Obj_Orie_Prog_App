@@ -94,6 +94,12 @@ class FactoryScreen(Screen):
       self.desc_label.font_size='20sp'
       
       self.bk_drop.add_widget(self.desc_label)
+      
+      self.img = Image(source='Obj_Orie_Prog_App\code_imgs\factory.PNG')
+      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.60}
+      self.img.size_hint_y=.6
+      self.img.size_hint_x=.6
+      self.bk_drop.add_widget(self.img)
             
       OFFSET=1.2
       
