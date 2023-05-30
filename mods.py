@@ -55,4 +55,3 @@ from kivy_garden.mapview import MapView
 from kivy_garden.mapview import MapMarkerPopup
 from kivymd.uix.card import MDCard
 
-username = None
