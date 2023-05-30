@@ -95,7 +95,7 @@ class FactoryScreen(Screen):
       
       self.bk_drop.add_widget(self.desc_label)
       
-      self.img = Image(source='Obj_Orie_Prog_App\code_imgs\factory.PNG')
+      self.img = Image(source='code_imgs\\factory.PNG')
       self.img.pos_hint={'center_x': 0.5, 'center_y': 0.60}
       self.img.size_hint_y=.6
       self.img.size_hint_x=.6
