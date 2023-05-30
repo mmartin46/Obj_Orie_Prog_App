@@ -53,3 +53,24 @@ abstract class Loan {
       System.out.println("The monthly EMI is " + EMI + " for the amount" + loanamount + " you have borrowed");
    }
 }
+
+// Create concrete classes that extend the Loan abstract class
+class HomeLoan extends Loan {
+   public void getInterestRate(double r) {
+      rate=r;
+   }  
+}
+class BusinessLoan extends Loan {
+   public void getInterestRate(double r) {
+      rate=r;
+   }
+}
+
+// Create an abstract class to get the factories
+// for Bank and Loan objects
+abstract class AbstractFactory {
+   public abstract Bank getBank(String bank);
+   public abstract Loan getLoan(String loan);
+}
+
+
