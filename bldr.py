@@ -2,7 +2,10 @@
 WHITE = [ 1, 1, 1, 1 ]
 COLOR_1 = { 0/255, 72/255, 186/255, 1 }
 
-
+# The string below represents
+# the StringBuilder which is
+# used to create the structure
+# of the application.
 app_build = """
 
 ScreenManager:
