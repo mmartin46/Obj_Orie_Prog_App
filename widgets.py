@@ -115,11 +115,25 @@ class FactoryDesc(Java_Descriptions):
       self.name = 'Factory Method Design'
       
    def java_design_desc(self):
-      """Returns the description of Behavioral Design Patterns"""
+      """Returns the description of Factory Design Pattern"""
       desc = "The Factory Method Pattern consists of"
       desc += " an interface or abstract class for "
       desc += "creating an object but the subclasses decide" 
       desc += " decide which class to instantiate."
       return desc
       
+class AbstractDesc(Java_Descriptions):
+   """Handles the Factory Method Pattern"""
+   def __init__(self):
+      super(Java_Descriptions, self).__init__()
+      self.name = 'Factory Method Design'
       
+   def java_design_desc(self):
+      """Returns the description of Abstract Factory Pattern"""
+      desc = "The Abstract Factory Pattern says that "
+      desc += "jus define an interface or abstract class for "
+      desc += "creating families or related (or dependent) objects "
+      desc += "alhough not specifying their sub-classes."
+      return desc
+      
+            

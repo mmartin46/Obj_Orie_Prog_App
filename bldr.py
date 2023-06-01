@@ -12,6 +12,7 @@ ScreenManager:
    OverviewScreen:
    OOP_Screen:
    FactoryScreen:
+   AbstractScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -21,6 +22,9 @@ ScreenManager:
    
 <FactoryScreen>
    name: 'fmp'
+   
+<AbstractScreen>
+   name: 'abs'
   
 <ElementCard@MDCard>:
    id: try

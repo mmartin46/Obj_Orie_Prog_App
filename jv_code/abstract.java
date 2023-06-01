@@ -63,6 +63,7 @@ abstract class AbstractFactory {
    public abstract Loan getLoan(String loan);
 }
 
+
 // Create the factory classes that inherit AbstractFactory
 // class to generate the object of concrete class based
 // on given information.
@@ -102,6 +103,9 @@ class LoanFactory extends AbstractFactory {
    }
 }
 
+// Create a FactoryCreator class to get
+// the factories by passing information
+// (e.g. Loan or Bank)
 class FactoryCreator {
    public static AbstractFactory getFactory(String choice) {
       if (choice.equalsIgnoreCase("BANK")) {

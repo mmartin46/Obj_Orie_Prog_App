@@ -20,7 +20,7 @@ class AbstractScreen(Screen):
       self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
-      self.title_label.text='Factory Method Pattern'
+      self.title_label.text='Abstract Factory Pattern'
       self.title_label.pos_hint={'center_y': .5}
       self.title_label.halign='center'
       self.title_label.font_size='25sp'
@@ -87,7 +87,7 @@ class AbstractScreen(Screen):
 
       # Description Label
       self.desc_label = MDLabel()
-      self.desc_label.text = str(FactoryDesc().java_design_desc())
+      self.desc_label.text = str(AbstractDesc().java_design_desc())
       self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
       self.desc_label.halign='center'
       self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.95}
@@ -95,12 +95,24 @@ class AbstractScreen(Screen):
       
       self.bk_drop.add_widget(self.desc_label)
       
-      self.img = Image(source='code_imgs\\factory.PNG')
+      self.img = Image(source='code_imgs\\abstract_1.PNG')
       self.img.pos_hint={'center_x': 0.5, 'center_y': 0.60}
       self.img.size_hint_y=.6
       self.img.size_hint_x=.6
       self.bk_drop.add_widget(self.img)
-            
+
+      self.img_2 = Image(source='code_imgs\\abstract_2.PNG')
+      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.40}
+      self.img_2.size_hint_y=.6
+      self.img_2.size_hint_x=.6
+      self.bk_drop.add_widget(self.img_2)
+
+      self.img_3 = Image(source='code_imgs\\abstract_3.PNG')
+      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.20}
+      self.img_3.size_hint_y=.6
+      self.img_3.size_hint_x=.6
+      self.bk_drop.add_widget(self.img_3)
+
       OFFSET=1.2
       
       """

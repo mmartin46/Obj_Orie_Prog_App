@@ -8,6 +8,7 @@ from mods import *
 from bldr import *
 from screens.overview import *
 from screens.factory import *
+from screens.abstract import *
 
 
 # Used for the icons on the main
@@ -42,6 +43,7 @@ class OOP_Screen(Screen):
       self.fp_c.bind(on_press=self.trans_fact_screen)
       self.ap_c=ElementCard()
       self.ap_c.text='Abstract Pattern'
+      self.ap_c.bind(on_press=self.trans_abs_screen)
       self.sp_c=ElementCard() 
       self.sp_c.text='Singleton Pattern'
       self.pp_c=ElementCard()
@@ -122,7 +124,11 @@ class OOP_Screen(Screen):
    def trans_fact_screen(self, obj):
       self.manager.current='fmp'
       self.manager.transition.direction='left'
-      
+
+   def trans_abs_screen(self, obj):
+      self.manager.current='abs'
+      self.manager.transition.direction='left'
+
    def on_leave(self, *args):
       self.clear_widgets()      
 
