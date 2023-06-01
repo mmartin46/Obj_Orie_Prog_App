@@ -1,3 +1,16 @@
+/*
+Mitchell Brian Martin
+06/01/2023
+
+Design Patterns
+
+The follwing database shows the Java
+Deisgn Patterns which are seperated
+by the type of pattern.
+
+*/
+
+
 DROP DATABASE oop_methods;
 CREATE DATABASE oop_methods;
 USE oop_methods;
@@ -32,9 +45,11 @@ INSERT INTO all_patterns VALUES
 	('Decorator Pattern', 'The Decorator Pattern consists of attach a flexible additional responsibilities to an object dynamically.', 'STRUCTURAL'),
 	('Facade Pattern', 'The Facade Pattern consists of providing a simplified interface to a set of interfaces in a subsystem, therefore it abstracts the subsystem from the client.', 'STRUCTURAL'),
 	('Flyweight Pattern', "The Flyweight Pattern consists of reusing existing related objects by storing them and create a new object when a matching object doesn't exist", 'STRUCTURAL'),
-	('Proxy Pattern', 'The Proxy Pattern consists of providing the conrol for accessing the original object.', 'STRUCTURAL');
+	('Proxy Pattern', 'The Proxy Pattern consists of providing the control for accessing the original object.', 'STRUCTURAL');
 
-
+INSERT INTO all_patterna VALUES
+	('Chain Of Responsibility Pattern', 'The Chain of Responsibility Pattern suggests to avoid coupling the sender of a request to its receiver by giving multiple objects a chance to handle the request', 'BEHAVIORAL'),
+	('Command Pattern', 'The Command Pattern consists of encapsulating a request under an object as a command and pass it to an invoker object', 'BEHAVIORAL');
 
 
 /*
