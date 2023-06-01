@@ -1,3 +1,6 @@
+class Singleton {
+   
+}
 /* 
 Early Intialization: creation of instance at load time.
 Lazy Instantitation: creation of instance when required.
@@ -31,3 +34,23 @@ class A {
 }
 
 // Lazy Instatiation
+class B {
+   private static B obj;
+   private B() {}
+
+   public static B getB() {
+      if (obj == null) {
+         synchronized (Singleton.class) {
+            if (obj == null) {
+               obj = new Singleton();
+            }
+         }
+      }
+      return obj;
+   }
+
+   public void someFunction() {
+      // Insert code
+   }
+
+}
