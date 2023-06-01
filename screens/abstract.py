@@ -10,7 +10,7 @@ class AbstractScreen(Screen):
       # Backdrop
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1300
+      self.bk_drop.height=1900
 
 
       # Title Layout
@@ -96,21 +96,21 @@ class AbstractScreen(Screen):
       self.bk_drop.add_widget(self.desc_label)
       
       self.img = Image(source='code_imgs\\abstract_1.PNG')
-      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.60}
+      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.80}
       self.img.size_hint_y=.6
       self.img.size_hint_x=.6
       self.bk_drop.add_widget(self.img)
 
       self.img_2 = Image(source='code_imgs\\abstract_2.PNG')
-      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.40}
-      self.img_2.size_hint_y=.6
-      self.img_2.size_hint_x=.6
+      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.58}
+      self.img_2.size_hint_y=.8
+      self.img_2.size_hint_x=.8
       self.bk_drop.add_widget(self.img_2)
 
       self.img_3 = Image(source='code_imgs\\abstract_3.PNG')
-      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.20}
-      self.img_3.size_hint_y=.6
-      self.img_3.size_hint_x=.6
+      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.28}
+      self.img_3.size_hint_y=.8
+      self.img_3.size_hint_x=.8
       self.bk_drop.add_widget(self.img_3)
 
       OFFSET=1.2
