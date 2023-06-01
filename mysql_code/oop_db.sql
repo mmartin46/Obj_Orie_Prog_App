@@ -26,7 +26,7 @@ INSERT INTO design_patterns VALUES
 	('Behavioral Design Pattern', 'BEHAVIORAL');
 	
 CREATE TABLE all_patterns(
-	p_name			VARCHAR(30) PRIMARY KEY,
+	p_name			VARCHAR(40) PRIMARY KEY,
 	p_desc			VARCHAR(1000),
 	m_type			VARCHAR(20),
 	FOREIGN KEY(m_type) REFERENCES design_patterns(m_type)
