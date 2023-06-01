@@ -47,7 +47,7 @@ INSERT INTO all_patterns VALUES
 	('Flyweight Pattern', "The Flyweight Pattern consists of reusing existing related objects by storing them and create a new object when a matching object doesn't exist", 'STRUCTURAL'),
 	('Proxy Pattern', 'The Proxy Pattern consists of providing the control for accessing the original object.', 'STRUCTURAL');
 
-INSERT INTO all_patterna VALUES
+INSERT INTO all_patterns VALUES
 	('Chain Of Responsibility Pattern', 'The Chain of Responsibility Pattern suggests to avoid coupling the sender of a request to its receiver by giving multiple objects a chance to handle the request', 'BEHAVIORAL'),
 	('Command Pattern', 'The Command Pattern consists of encapsulating a request under an object as a command and pass it to an invoker object', 'BEHAVIORAL');
 
