@@ -23,7 +23,23 @@ INSERT INTO all_patterns VALUES
 	('Singleton Design Patterm', 'The Singleton Pattern defines a class that has only one instance a provides a global point of access to it.', 'CREATIONAL'),
 	('Prototype Pattern', 'The Prototype Pattern consists of cloning an existing object instead of creating a new class anc customized with the requirement', 'CREATIONAL'),
 	('Builder Pattern', 'The Builder Design Pattern consists of constructing a complex object from simple objects using an incremental approach.', 'CREATIONAL'),
-	('Object Pool Pattern', "The Object Pool Pattern says to reuse the object that's expensive to create", 'CREATIONAL'),
+	('Object Pool Pattern', "The Object Pool Pattern says to reuse the object that's expensive to create", 'CREATIONAL');
+	
+INSERT INTO all_patterns VALUES
 	('Adapter Pattern', 'The Adapter Pattern consists of converting the interface of a class to another interface a client wants', 'STRUCTURAL'),
 	('Bridge Pattern', 'The Bridge Pattern says to decouple he functional abstraction from the implementation so that they may vary independently', 'STRUCTURAL'),
-	('Composite Pattern', 'The Composie Pattern consists of allowing clients to operate in a general manner on objects. (May/may not represent a hierachy of objects)', 'STRUCTURAL');
+	('Composite Pattern', 'The Composie Pattern consists of allowing clients to operate in a general manner on objects. (May/may not represent a hierachy of objects)', 'STRUCTURAL'),
+	('Decorator Pattern', 'The Decorator Pattern consists of attach a flexible additional responsibilities to an object dynamically.', 'STRUCTURAL'),
+	('Facade Pattern', 'The Facade Pattern consists of providing a simplified interface to a set of interfaces in a subsystem, therefore it abstracts the subsystem from the client.', 'STRUCTURAL'),
+	('Flyweight Pattern', "The Flyweight Pattern consists of reusing existing related objects by storing them and create a new object when a matching object doesn't exist", 'STRUCTURAL'),
+	('Proxy Pattern', 'The Proxy Pattern consists of providing the conrol for accessing the original object.', 'STRUCTURAL');
+
+
+
+
+/*
+SELECT all_patterns.* FROM design_patterns
+INNER JOIN all_patterns ON design_patterns.m_type = all_patterns.m_type
+WHERE design_patterns.m_type = 'STRUCTURAL';
+*/
+
