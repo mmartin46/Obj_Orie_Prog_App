@@ -1,4 +1,4 @@
-import java.io.BufferedReader;;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -15,33 +15,30 @@ interface Prototype {
 // does the cloning of GameRecord object.
 class GameRecord implements Prototype {
    private String name;
-   private int consule;
+   private String consule;
    private int year;
-   private int day;
-   private int month;
 
 
    public GameRecord() {
       System.out.println("  Records of Games  ");
       System.out.println("---------------------------------");
-      System.out.println("Name" + "\t" + "Consule" + "\t" + "Year" + "\t" + "Day" + "\t" + "Month");
+      System.out.println("Name" + "\t" + "Consule" + "\t" + "Year");
    }
 
-   public GameRecord(String name, int consule, int year, int day, int month) {
+   public GameRecord(String name, String consule, int year) {
       this.name = name;
       this.consule = consule;
-      this.day = day;
-      this.month = month;
+      this.year = year;
    }
 
    public void showRecord() {
-      System.out.println(name + "\t" + consule + "\t" + year + "\t" + day + "\t" + month);
+      System.out.println(name + "\t" + consule + "\t" + year);
    }
 
    // Clones the GameRecord
    @Override
    public Prototype getClone() {
-      return new GameRecord(name, consule, year, day, month);
+      return new GameRecord(name, consule, year);
    }
 }
 
@@ -49,5 +46,23 @@ class PrototypoDemo {
    public static void main(String []args) throws IOException {
 
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      System.out.println("Game Name: ");
+      String n = br.readLine();
+      System.out.print("\n");
+
+      System.out.println("Game Consule: ");
+      String c = br.readLine();
+      System.out.print("\n");
+
+      System.out.println("Game Year: ");
+      int y = Integer.parseInt(br.readLine());
+      System.out.print("\n");
+
+      GameRecord game1 = new GameRecord(n, c, y);
+      game1.showRecord();
+      System.out.print("\n\n");
+      
+      GameRecord game2 = (GameRecord) game1.getClone();
+      game2.showRecord();
    }
 }
