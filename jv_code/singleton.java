@@ -1,5 +1,5 @@
 class Singleton {
-   
+
 }
 /* 
 Early Intialization: creation of instance at load time.
@@ -34,6 +34,9 @@ class A {
 }
 
 // Lazy Instatiation
+// We create the instance of the class in synchronized method or
+// synchronized block, so instance of the class is created
+// when required.
 class B {
    private static B obj;
    private B() {}
@@ -52,5 +55,4 @@ class B {
    public void someFunction() {
       // Insert code
    }
-
 }
