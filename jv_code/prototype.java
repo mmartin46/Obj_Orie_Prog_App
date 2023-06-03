@@ -1,3 +1,8 @@
+import java.io.BufferedReader;;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
 // We need to create an interface Prototype
 // that contains a mehod getClone() of 
 // Prototype type.
@@ -38,5 +43,11 @@ class GameRecord implements Prototype {
    public Prototype getClone() {
       return new GameRecord(name, consule, year, day, month);
    }
+}
 
+class PrototypoDemo {
+   public static void main(String []args) throws IOException {
+
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+   }
 }
