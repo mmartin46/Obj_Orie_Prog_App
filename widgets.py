@@ -1,11 +1,14 @@
 import mysql.connector
+import os
+
+db_pass = os.environ.get('db_pass')
 
 class Database():
    def __init__(self):
       self.mydb = mysql.connector.connect(
          host = "sql9.freesqldatabase.com",
          user = "sql9623845",
-         passwd = "WwwQVWvhV7",
+         passwd = db_pass,
          database = "sql9623845"
       )
       
