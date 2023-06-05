@@ -3,8 +3,6 @@ from mysql.connector.locales.eng import client_error
 from mysql.connector import Error
 
 import os
-
-n = "HeBoreItAll#1"
 db_pass = os.environ.get('dbpass')
 
 
