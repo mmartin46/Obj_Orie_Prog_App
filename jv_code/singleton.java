@@ -1,6 +1,7 @@
 class Singleton {
-
+   
 }
+
 /* 
 Early Intialization: creation of instance at load time.
 Lazy Instantitation: creation of instance when required.

@@ -9,6 +9,8 @@ from bldr import *
 from screens.overview import *
 from screens.factory import *
 from screens.abstract import *
+from screens.singleton import *
+
 
 
 # Used for the icons on the main
@@ -46,6 +48,7 @@ class OOP_Screen(Screen):
       self.ap_c.bind(on_press=self.trans_abs_screen)
       self.sp_c=ElementCard() 
       self.sp_c.text='Singleton Pattern'
+      self.sp_c.bind(on_press=self.trans_sgl_screen)
       self.pp_c=ElementCard()
       self.pp_c.text='Prototype Pattern'
       self.bp_c=ElementCard()
@@ -127,6 +130,10 @@ class OOP_Screen(Screen):
 
    def trans_abs_screen(self, obj):
       self.manager.current='abs'
+      self.manager.transition.direction='left'
+
+   def trans_sgl_screen(self, obj):
+      self.manager.current='sgl'
       self.manager.transition.direction='left'
 
    def on_leave(self, *args):

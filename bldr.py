@@ -13,6 +13,7 @@ ScreenManager:
    OOP_Screen:
    FactoryScreen:
    AbstractScreen:
+   SingletonScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -25,6 +26,9 @@ ScreenManager:
    
 <AbstractScreen>
    name: 'abs'
+  
+<SingletonScreen>
+   name: 'sgl'
   
 <ElementCard@MDCard>:
    id: try

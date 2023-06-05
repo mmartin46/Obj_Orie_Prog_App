@@ -1,27 +1,29 @@
 import mysql.connector
+from mysql.connector.locales.eng import client_error
+from mysql.connector import Error
+
 import os
 
-db_pass = os.environ.get('db_pass')
+n = "HeBoreItAll#1"
+db_pass = os.environ.get('dbpass')
+
 
 class Database():
    def __init__(self):
       self.mydb = mysql.connector.connect(
-         host = "sql9.freesqldatabase.com",
-         user = "sql9623845",
+         host = "127.0.0.1",
+         user = "root",
          passwd = db_pass,
-         database = "sql9623845"
+         database = "oop_methods"
       )
       
       self.c = self.mydb.cursor()
       
    def get_query(self, query):
-      query = ""
-      try:
-         self.c.execute(str(query))
-      except:
-         print("Unacceptable Query")
+      self.c.execute(query)
       query = self.c.fetchall()
-      return str(query)
+      query = str(query).replace("(", "").replace(")", "")
+      return query.replace("[", "").replace("]", "").replace("'", "")
 
 class Java_Descriptions(object):
    """Handles the Java Main Design Descriptions"""
@@ -166,9 +168,9 @@ class SingletonDesc(Java_Descriptions):
       self.early_instantiation = "Creation of Instance at Load Time"
       self.lazy_instantiation = "Creation of Instance when Required" 
       self.db = Database()
-      self.name = self.db.get_query('SELECT p_name FROM all_patterns WHERE p_name LIKE \'Singleton%\'')
+      self.name = self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Singleton%'""")
       
    def java_design_desc(self):
       """Returns the description of Singleton Factory Pattern"""
-      desc = self.db.get_query('SELECT p_desc FROM all_patterns WHERE p_name LIKE \'Singleton%\'')
+      desc = self.db.get_query("""SELECT p_desc FROM all_patterns WHERE p_name LIKE 'Singleton%'""")
       return desc
