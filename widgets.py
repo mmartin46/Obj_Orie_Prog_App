@@ -24,6 +24,15 @@ class Database():
       query = query.replace("[", "").replace("]", "").replace("'", "")
       return query.rstrip(query[-1])
 
+
+
+
+
+
+
+
+
+
 class Java_Descriptions(object):
    """Handles the Java Main Design Descriptions"""
    def __init__(self):
@@ -179,3 +188,10 @@ class PrototypeDesc(Java_Descriptions):
    def __init__(self):
       super(Java_Descriptions, self).__init__()
       self.db = Database()
+      self.name = self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Prototype%'""")
+
+   def java_design_desc(self):
+      """Returns the description of Singleton Factory Pattern"""
+      desc = self.db.get_query("""SELECT p_desc FROM all_patterns WHERE p_name LIKE 'Prototype%'""")
+      return desc
+   
