@@ -159,4 +159,16 @@ class AbstractDesc(Java_Descriptions):
       desc += "alhough not specifying their sub-classes."
       return desc
       
-            
+class SingletonDesc(Java_Descriptions):
+   """Handles the Singleton Pattern"""
+   def __init__(self):
+      super(Java_Descriptions, self).__init__()
+      self.early_instantiation = "Creation of Instance at Load Time"
+      self.lazy_instantiation = "Creation of Instance when Required" 
+      self.db = Database()
+      self.name = self.db.get_query('SELECT p_name FROM all_patterns WHERE p_name LIKE \'Singleton%\'')
+      
+   def java_design_desc(self):
+      """Returns the description of Singleton Factory Pattern"""
+      desc = self.db.get_query('SELECT p_desc FROM all_patterns WHERE p_name LIKE \'Singleton%\'')
+      return desc
