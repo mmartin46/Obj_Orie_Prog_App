@@ -14,6 +14,7 @@ ScreenManager:
    FactoryScreen:
    AbstractScreen:
    SingletonScreen:
+   PrototypeScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -29,6 +30,9 @@ ScreenManager:
   
 <SingletonScreen>
    name: 'sgl'
+   
+<PrototypeScreen>
+   name: 'pp'
   
 <ElementCard@MDCard>:
    id: try

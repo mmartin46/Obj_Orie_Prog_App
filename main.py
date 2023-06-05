@@ -10,6 +10,7 @@ from screens.overview import *
 from screens.factory import *
 from screens.abstract import *
 from screens.singleton import *
+from screens.prototype import *
 
 
 
@@ -51,6 +52,7 @@ class OOP_Screen(Screen):
       self.sp_c.bind(on_press=self.trans_sgl_screen)
       self.pp_c=ElementCard()
       self.pp_c.text='Prototype Pattern'
+      self.pp_c.bind(on_press=self.trans_pp_screen)
       self.bp_c=ElementCard()
       self.bp_c.text='Builder Pattern'
       self.op_p=ElementCard()
@@ -134,6 +136,10 @@ class OOP_Screen(Screen):
 
    def trans_sgl_screen(self, obj):
       self.manager.current='sgl'
+      self.manager.transition.direction='left'
+
+   def trans_pp_screen(self, obj):
+      self.manager.current='pp'
       self.manager.transition.direction='left'
 
    def on_leave(self, *args):

@@ -33,8 +33,8 @@ CREATE TABLE all_patterns(
 );
 
 INSERT INTO all_patterns VALUES
-	('Singleton Design Pattern', 'The Singleton Pattern defines a class that has only one instance a provides a global point of access to it.', 'CREATIONAL'),
-	('Prototype Pattern', 'The Prototype Pattern consists of cloning an existing object instead of creating a new class anc customized with the requirement', 'CREATIONAL'),
+	('Singleton Design Pattern', 'The Singleton Pattern defines a class that has only one instance and provides a global point of access to it.', 'CREATIONAL'),
+	('Prototype Pattern', 'The Prototype Pattern consists of cloning an existing object instead of creating a new class and customized with the requirement', 'CREATIONAL'),
 	('Builder Pattern', 'The Builder Design Pattern consists of constructing a complex object from simple objects using an incremental approach.', 'CREATIONAL'),
 	('Object Pool Pattern', "The Object Pool Pattern says to reuse the object that's expensive to create", 'CREATIONAL');
 	

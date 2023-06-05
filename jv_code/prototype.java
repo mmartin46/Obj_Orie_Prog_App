@@ -42,6 +42,9 @@ class GameRecord implements Prototype {
    }
 }
 
+
+
+
 class PrototypoDemo {
    public static void main(String []args) throws IOException {
 
