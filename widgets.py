@@ -23,7 +23,8 @@ class Database():
       self.c.execute(query)
       query = self.c.fetchall()
       query = str(query).replace("(", "").replace(")", "")
-      return query.replace("[", "").replace("]", "").replace("'", "")
+      query = query.replace("[", "").replace("]", "").replace("'", "")
+      return query.rstrip(query[-1])
 
 class Java_Descriptions(object):
    """Handles the Java Main Design Descriptions"""
@@ -174,3 +175,9 @@ class SingletonDesc(Java_Descriptions):
       """Returns the description of Singleton Factory Pattern"""
       desc = self.db.get_query("""SELECT p_desc FROM all_patterns WHERE p_name LIKE 'Singleton%'""")
       return desc
+   
+class PrototypeDesc(Java_Descriptions):
+   """Handles the Prototype Design Pattern"""
+   def __init__(self):
+      super(Java_Descriptions, self).__init__()
+      self.db = Database()

@@ -11,7 +11,7 @@ class SingletonScreen(Screen):
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
       self.bk_drop.height=1300
-
+      self.db = Database()
 
       # Title Layout
       self.title_lout = MDFloatLayout()
@@ -20,7 +20,7 @@ class SingletonScreen(Screen):
       self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
-      self.title_label.text='Factory Method Pattern'
+      self.title_label.text=self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Singleton%'""")
       self.title_label.pos_hint={'center_y': .5}
       self.title_label.halign='center'
       self.title_label.font_size='25sp'
@@ -97,14 +97,14 @@ class SingletonScreen(Screen):
       
       self.img = Image(source='code_imgs\\singleton_0.PNG')
       self.img.pos_hint={'center_x': 0.5, 'center_y': 0.70}
-      self.img.size_hint_y=.6
-      self.img.size_hint_x=.6
+      self.img.size_hint_y=.8
+      self.img.size_hint_x=.8
       self.bk_drop.add_widget(self.img)
             
       self.img_2 = Image(source='code_imgs\\singleton_1.PNG')
       self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.30}
-      self.img_2.size_hint_y=.6
-      self.img_2.size_hint_x=.6
+      self.img_2.size_hint_y=.8
+      self.img_2.size_hint_x=.8
       self.bk_drop.add_widget(self.img_2)
 
       OFFSET=1.2
