@@ -1,4 +1,24 @@
+import mysql.connector
 
+class Database():
+   def __init__(self):
+      self.mydb = mysql.connector.connect(
+         host = "sql9.freesqldatabase.com",
+         user = "sql9623845",
+         passwd = "WwwQVWvhV7",
+         database = "sql9623845"
+      )
+      
+      self.c = self.mydb.cursor()
+      
+   def get_query(self, query):
+      query = ""
+      try:
+         self.c.execute(str(query))
+      except:
+         print("Unacceptable Query")
+      query = self.c.fetchall()
+      return str(query)
 
 class Java_Descriptions(object):
    """Handles the Java Main Design Descriptions"""
