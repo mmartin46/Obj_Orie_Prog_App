@@ -218,4 +218,17 @@ class ObjectPoolDesc(Java_Descriptions):
       """Returns the description of Builder Factory Pattern"""
       desc = self.db.get_query("""SELECT p_desc FROM all_patterns WHERE p_name LIKE 'Object%'""")
       return desc
-      
+   
+class GetDesignDesc:
+   def __init__(self, typepattern):
+      self.db = Database()
+      self.tp = typepattern
+      s = "SELECT p_name FROM all_patterns WHERE p_name LIKE" + self.tp + ""
+      self.name = self.db.get_query(s)
+
+   def java_design_desc(self):
+      """Returns the description of Builder Factory Pattern"""
+      d = "SELECT p_nae FROM all_patterns WHERE p_name LIKE" + self.tp + ""
+      desc = self.db.get_query(d)
+      return desc
+   
