@@ -1,6 +1,10 @@
+
+
 package builder;
 import java.util.ArrayList;
 import java.util.List;
+
+/* USE IN SEPERATE FILE */
 // Packing.java
 
 // Create Packing interface
@@ -9,6 +13,7 @@ public interface Packing {
    public int price();
 }
 
+/* USE IN SEPERATE FILE */
 // CD.java
 
 // Create 2 abstract classes 
@@ -20,6 +25,7 @@ public abstract class Company extends CD{
    public abstract int price();
 }
 
+/* USE IN SEPERATE FILE */
 // Sony.java
 
 // Create 2 implementation classes of Company:
@@ -35,6 +41,7 @@ public class Sony extends Company {
    }
 }
 
+/* USE IN SEPERATE FILE */
 // Samsung.java
 public class Samsung extends Company {
    @Override
@@ -47,6 +54,7 @@ public class Samsung extends Company {
    }
 }
 
+/* USE IN SEPERATE FILE */
 // CDType.java
 public class CDType {
    private List<Packing> items = new ArrayList<Packing>();
@@ -68,6 +76,7 @@ public class CDType {
    }
 }
 
+/* USE IN SEPERATE FILE */
 // CDBuilder.java
 public class CDBuilder {
    public CDType buildSonyCD() {

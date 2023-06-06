@@ -15,6 +15,7 @@ ScreenManager:
    AbstractScreen:
    SingletonScreen:
    PrototypeScreen:
+   BuilderScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -33,6 +34,9 @@ ScreenManager:
    
 <PrototypeScreen>
    name: 'pp'
+
+<BuilderScreen>
+   name: 'bp'
   
 <ElementCard@MDCard>:
    id: try

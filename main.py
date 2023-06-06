@@ -11,6 +11,7 @@ from screens.factory import *
 from screens.abstract import *
 from screens.singleton import *
 from screens.prototype import *
+from screens.builder import *
 
 
 
@@ -55,6 +56,7 @@ class OOP_Screen(Screen):
       self.pp_c.bind(on_press=self.trans_pp_screen)
       self.bp_c=ElementCard()
       self.bp_c.text='Builder Pattern'
+      self.bp_c.bind(on_press=self.trans_bp_screen)
       self.op_p=ElementCard()
       self.op_p.text='Object Pool Pattern'
       self.ad_p=ElementCard()
@@ -141,6 +143,11 @@ class OOP_Screen(Screen):
    def trans_pp_screen(self, obj):
       self.manager.current='pp'
       self.manager.transition.direction='left'
+
+   def trans_bp_screen(self, obj):
+      self.manager.current='bp'
+      self.manager.transition.direction='left'
+
 
    def on_leave(self, *args):
       self.clear_widgets()      
