@@ -3,7 +3,7 @@ from mysql.connector.locales.eng import client_error
 from mysql.connector import Error
 
 import os
-db_pass = os.environ.get('dbpass')
+db_pass = os.environ.get('db_pass')
 
 
 class Database():
