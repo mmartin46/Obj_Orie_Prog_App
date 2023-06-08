@@ -11,7 +11,7 @@ class ObjPoolScreen(Screen):
       # Backdrop
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1300
+      self.bk_drop.height=1700
       self.db = Database()
 
       # Title Layout
@@ -96,17 +96,24 @@ class ObjPoolScreen(Screen):
       
       self.bk_drop.add_widget(self.desc_label)
       
-      self.img = Image(source='code_imgs\\builder_0.PNG')
-      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.72}
+      self.img = Image(source='code_imgs\\object_0.PNG')
+      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.67}
       self.img.size_hint_y=.7
       self.img.size_hint_x=.7
       self.bk_drop.add_widget(self.img)
             
-      self.img_2 = Image(source='code_imgs\\builder_1.PNG')
-      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.24}
+      self.img_2 = Image(source='code_imgs\\object_1.PNG')
+      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.37}
       self.img_2.size_hint_y=.6
       self.img_2.size_hint_x=.6
       self.bk_drop.add_widget(self.img_2)
+
+      self.img_3 = Image(source='code_imgs\\object_1.PNG')
+      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.2}
+      self.img_3.size_hint_y=.6
+      self.img_3.size_hint_x=.6
+      self.bk_drop.add_widget(self.img_3)
+
 
       OFFSET=1.2
       

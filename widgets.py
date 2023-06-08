@@ -228,7 +228,7 @@ class GetDesignDesc:
 
    def java_design_desc(self):
       """Returns the description of Builder Factory Pattern"""
-      d = "SELECT p_name FROM all_patterns WHERE p_name LIKE '" + self.tp + "'"
+      d = "SELECT p_desc FROM all_patterns WHERE p_name LIKE '" + self.tp + "'"
       desc = self.db.get_query(d)
       return desc
    
