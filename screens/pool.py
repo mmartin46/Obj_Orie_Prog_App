@@ -3,7 +3,7 @@ from bldr import *
 from widgets import *
 
 
-class BuilderScreen(Screen):
+class ObjPoolScreen(Screen):
    def __init__(self, **kw):
       super().__init__(**kw)
       
@@ -21,7 +21,7 @@ class BuilderScreen(Screen):
       self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
-      self.title_label.text=self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Builder%'""")
+      self.title_label.text=self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Object Pool%'""")
       self.title_label.pos_hint={'center_y': .5}
       self.title_label.halign='center'
       self.title_label.font_size='25sp'
@@ -88,7 +88,7 @@ class BuilderScreen(Screen):
 
       # Description Label
       self.desc_label = MDLabel()
-      self.desc_label.text = str(BuilderDesc().java_design_desc())
+      self.desc_label.text = str(GetDesignDesc('Object Pool%').java_design_desc())
       self.desc_label.text_color = [23/255, 23/255, 23/255, 1 ]
       self.desc_label.halign='center'
       self.desc_label.pos_hint={'center_x': 0.5, 'center_y': 0.95}
@@ -98,8 +98,8 @@ class BuilderScreen(Screen):
       
       self.img = Image(source='code_imgs\\builder_0.PNG')
       self.img.pos_hint={'center_x': 0.5, 'center_y': 0.72}
-      self.img.size_hint_y=.6
-      self.img.size_hint_x=.6
+      self.img.size_hint_y=.7
+      self.img.size_hint_x=.7
       self.bk_drop.add_widget(self.img)
             
       self.img_2 = Image(source='code_imgs\\builder_1.PNG')
@@ -146,5 +146,3 @@ class BuilderScreen(Screen):
       ))   
    def on_leave(self, *args):
       self.clear_widgets()
-      
-      

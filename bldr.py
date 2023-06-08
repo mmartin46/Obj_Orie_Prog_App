@@ -16,6 +16,7 @@ ScreenManager:
    SingletonScreen:
    PrototypeScreen:
    BuilderScreen:
+   ObjPoolScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -37,6 +38,9 @@ ScreenManager:
 
 <BuilderScreen>
    name: 'bp'
+   
+<ObjPoolScreen>
+   name: 'op'
   
 <ElementCard@MDCard>:
    id: try
