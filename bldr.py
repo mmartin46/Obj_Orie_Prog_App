@@ -49,7 +49,7 @@ ScreenManager:
    radius:dp(25)
    icon:''
    icon_size: dp(30)
-   image:''
+   image:'code_imgs/button_icon.png'
    text:""
    md_bg_color: [ 196/255, 255/255, 215/255, 1 ]
    theme_text_color: "Custom"
