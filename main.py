@@ -13,6 +13,7 @@ from screens.singleton import *
 from screens.prototype import *
 from screens.builder import *
 from screens.pool import *
+from screens.adapter import *
 
 
 
@@ -63,6 +64,7 @@ class OOP_Screen(Screen):
       self.op_p.bind(on_press=self.trans_op_screen)
       self.ad_p=ElementCard()
       self.ad_p.text='Adapter Pattern'
+      self.ad_p.bind(on_press=self.trans_ad_screen)
 
       self.grid.add_widget(self.ov_c)
       self.grid.add_widget(self.fp_c)
@@ -152,6 +154,10 @@ class OOP_Screen(Screen):
 
    def trans_op_screen(self, obj):
       self.manager.current='op'
+      self.manager.transition.direction='left'
+
+   def trans_ad_screen(self, obj):
+      self.manager.current='ad'
       self.manager.transition.direction='left'
 
    def on_leave(self, *args):

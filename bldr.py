@@ -17,6 +17,7 @@ ScreenManager:
    PrototypeScreen:
    BuilderScreen:
    ObjPoolScreen:
+   AdapterScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -41,6 +42,9 @@ ScreenManager:
    
 <ObjPoolScreen>
    name: 'op'
+   
+<AdapterScreen>
+   name: 'ad'
   
 <ElementCard@MDCard>:
    id: try
