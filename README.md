@@ -10,7 +10,7 @@ java design patterns.
 
 ![](https://i.postimg.cc/W1w9625W/dp.png)
 ![](https://i.postimg.cc/J7s2VCh0/dp-1.png)
-![]https://i.postimg.cc/63jLbqZc/prototype.png)
+![](https://i.postimg.cc/63jLbqZc/prototype.png)
 
 
 <img src="https://postimg.cc/CB8qzFmn" width="128"/>
