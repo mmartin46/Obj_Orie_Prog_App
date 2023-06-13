@@ -11,9 +11,9 @@ developed utilizing Python's Kivy API.
 ## Screenshots
 
 <p float="left">
-   <img src="https://i.postimg.cc/W1w9625W/dp.png" width="190" />
-   <img src="https://i.postimg.cc/J7s2VCh0/dp-1.png" width="190" />
-   <img src="https://i.postimg.cc/63jLbqZc/prototype.png" width="190" />
+   <img src="https://i.postimg.cc/fRNYMpxY/dp.png" width="190" />
+   <img src="https://i.postimg.cc/nzkvWksq/dp-1.png" width="190" />
+   <img src="https://i.postimg.cc/NMSrSzs9/prototype.png" width="190" />
 </p>
 
 ## Features
