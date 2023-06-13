@@ -18,6 +18,8 @@ ScreenManager:
    BuilderScreen:
    ObjPoolScreen:
    AdapterScreen:
+   BridgeScreen:
+   
    
 <OverviewScreen>
    name: 'main'
@@ -45,6 +47,9 @@ ScreenManager:
    
 <AdapterScreen>
    name: 'ad'
+
+<BridgeScreen>
+   name: 'bgs'
   
 <ElementCard@MDCard>:
    id: try

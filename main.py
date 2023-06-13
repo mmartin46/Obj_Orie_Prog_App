@@ -14,7 +14,7 @@ from screens.prototype import *
 from screens.builder import *
 from screens.pool import *
 from screens.adapter import *
-
+from screens.bridge import *
 
 
 # Used for the icons on the main
@@ -27,6 +27,7 @@ class ElementCard(MDCard):
 class OOP_Screen(Screen):
    def __init__(self, **kw):
       super().__init__(**kw)
+      self.db = Database()
       # Backdrop
       
    def on_enter(self, *args):
@@ -65,6 +66,10 @@ class OOP_Screen(Screen):
       self.ad_p=ElementCard()
       self.ad_p.text='Adapter Pattern'
       self.ad_p.bind(on_press=self.trans_ad_screen)
+      self.bgs_p=ElementCard()
+      self.bgs_p.text=str(GetDesignDesc('Bridge').get_name())
+      self.bgs_p.bind(on_press=self.trans_bgs_screen)
+      
 
       self.grid.add_widget(self.ov_c)
       self.grid.add_widget(self.fp_c)
@@ -74,6 +79,7 @@ class OOP_Screen(Screen):
       self.grid.add_widget(self.bp_c)
       self.grid.add_widget(self.op_p)
       self.grid.add_widget(self.ad_p)
+      self.grid.add_widget(self.bgs_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout
@@ -158,6 +164,10 @@ class OOP_Screen(Screen):
 
    def trans_ad_screen(self, obj):
       self.manager.current='ad'
+      self.manager.transition.direction='left'
+
+   def trans_bgs_screen(self, obj):
+      self.manager.current='bgs'
       self.manager.transition.direction='left'
 
    def on_leave(self, *args):
