@@ -38,9 +38,12 @@ https://www.javatpoint.com/
 ## Code Organization
 
 ### jv_code
-Handles the Java code
+The jv_code subdirectory handles all the Java
+Design Pattern Code utilized within the application.
 ### screens
-Handles each screen
+The screens subdirectory handles each screen
+within the application.
 ### code_imgs
-Handles each image
+The code_imgs subdirectory holds all images that
+are used within the application.
 
