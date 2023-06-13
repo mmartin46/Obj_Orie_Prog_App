@@ -111,14 +111,6 @@ class OOP_Screen(Screen):
       self.home_btn.icon_color=WHITE
       self.tool_lout.add_widget(self.home_btn)
       
-      # Back Button
-      self.back_btn_2=MDIconButton()
-      self.back_btn_2.icon='backburger'
-      self.back_btn_2.theme_icon_color='Custom'
-      self.back_btn_2.icon_color=WHITE
-      self.back_btn_2.pos_hint={'center_x': .2, 'center_y': .5}
-      self.tool_lout.add_widget(self.back_btn_2)
-      
       
       # Scroll View
       self.view=ScrollView()
