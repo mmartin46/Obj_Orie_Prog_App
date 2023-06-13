@@ -8,9 +8,9 @@ java design patterns.
 - Mitchell Martin
 ## Screenshots
 
-![](https://postimg.cc/CB8qzFmn)
-![](https://postimg.cc/4nT5VMVR)
-![](https://postimg.cc/v4DLGdFf)
+![](https://i.postimg.cc/W1w9625W/dp.png)
+![](https://i.postimg.cc/J7s2VCh0/dp-1.png)
+![]https://i.postimg.cc/63jLbqZc/prototype.png)
 
 
 <img src="https://postimg.cc/CB8qzFmn" width="128"/>
