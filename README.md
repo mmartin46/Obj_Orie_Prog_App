@@ -2,17 +2,9 @@
 
 The object-oriented programming application
 is meant to help users understand different
-java design patterns.
+java design patterns. The application was entirely
+developed utilizing Python's Kivy API.
 
-
-## Code Organization
-
-### jv_code
-Handles the Java code
-### screens
-Handles each screen
-### code_imgs
-Handles each image
 
 ## Authors
 - Mitchell Martin
@@ -42,4 +34,13 @@ https://www.javatpoint.com/
 
 - Kivy
 - MySQL
+
+## Code Organization
+
+### jv_code
+Handles the Java code
+### screens
+Handles each screen
+### code_imgs
+Handles each image
 
