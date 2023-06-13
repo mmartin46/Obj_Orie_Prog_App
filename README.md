@@ -3,7 +3,10 @@
 The object-oriented programming application
 is meant to help users understand different
 java design patterns.
-The application is separated into multiple subsections.
+
+
+# Code Organization
+
 ### jv_code
 Handles the Java code
 ### screens
