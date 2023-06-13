@@ -47,28 +47,28 @@ class OOP_Screen(Screen):
       self.ov_c.bind(on_press=self.trans_main_screen)
       self.fp_c=ElementCard()
       self.fp_c.text='Factory Pattern'
-      self.fp_c.bind(on_press=self.trans_fact_screen)
+      self.fp_c.fbind('on_press', self.trans_screen, scr='fmp')
       self.ap_c=ElementCard()
       self.ap_c.text='Abstract Pattern'
-      self.ap_c.bind(on_press=self.trans_abs_screen)
+      self.ap_c.fbind('on_press', self.trans_screen, scr='abs')
       self.sp_c=ElementCard() 
       self.sp_c.text='Singleton Pattern'
-      self.sp_c.bind(on_press=self.trans_sgl_screen)
+      self.sp_c.fbind('on_press', self.trans_screen, scr='sgl')
       self.pp_c=ElementCard()
       self.pp_c.text='Prototype Pattern'
-      self.pp_c.bind(on_press=self.trans_pp_screen)
+      self.pp_c.fbind('on_press', self.trans_screen, scr='pp')
       self.bp_c=ElementCard()
       self.bp_c.text='Builder Pattern'
-      self.bp_c.bind(on_press=self.trans_bp_screen)
+      self.bp_c.fbind('on_press', self.trans_screen, scr='bp')
       self.op_p=ElementCard()
       self.op_p.text='Object Pool Pattern'
-      self.op_p.bind(on_press=self.trans_op_screen)
+      self.op_p.fbind('on_press', self.trans_screen, scr='op')
       self.ad_p=ElementCard()
       self.ad_p.text='Adapter Pattern'
-      self.ad_p.bind(on_press=self.trans_ad_screen)
+      self.ad_p.fbind('on_press', self.trans_screen, scr='ad')
       self.bgs_p=ElementCard()
       self.bgs_p.text=str(GetDesignDesc('Bridge').get_name())
-      self.bgs_p.bind(on_press=self.trans_bgs_screen)
+      self.bgs_p.fbind('on_press', self.trans_screen, scr='bgs')
       
 
       self.grid.add_widget(self.ov_c)
@@ -138,36 +138,8 @@ class OOP_Screen(Screen):
       self.manager.current='main'
       self.manager.transition.direction='left'
 
-   def trans_fact_screen(self, obj):
-      self.manager.current='fmp'
-      self.manager.transition.direction='left'
-
-   def trans_abs_screen(self, obj):
-      self.manager.current='abs'
-      self.manager.transition.direction='left'
-
-   def trans_sgl_screen(self, obj):
-      self.manager.current='sgl'
-      self.manager.transition.direction='left'
-
-   def trans_pp_screen(self, obj):
-      self.manager.current='pp'
-      self.manager.transition.direction='left'
-
-   def trans_bp_screen(self, obj):
-      self.manager.current='bp'
-      self.manager.transition.direction='left'
-
-   def trans_op_screen(self, obj):
-      self.manager.current='op'
-      self.manager.transition.direction='left'
-
-   def trans_ad_screen(self, obj):
-      self.manager.current='ad'
-      self.manager.transition.direction='left'
-
-   def trans_bgs_screen(self, obj):
-      self.manager.current='bgs'
+   def trans_screen(self, obj, scr):
+      self.manager.current=str(scr)
       self.manager.transition.direction='left'
 
    def on_leave(self, *args):
