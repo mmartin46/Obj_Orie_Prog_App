@@ -2,7 +2,7 @@
 
 The object-oriented programming application
 is meant to help users understand different
-java design patterns. The application was entirely
+Java design patterns. The application was entirely
 developed utilizing Python's Kivy API.
 
 
