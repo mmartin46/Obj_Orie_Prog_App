@@ -13,6 +13,7 @@ java design patterns.
 ![](https://postimg.cc/v4DLGdFf)
 
 
+<img src="https://postimg.cc/CB8qzFmn" width="128"/>
 
 
 ## Features
