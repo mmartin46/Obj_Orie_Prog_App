@@ -21,7 +21,7 @@ class AdapterScreen(Screen):
       self.title_lout.md_bg_color=COLOR_1
       # Label for Title
       self.title_label=Label()
-      self.title_label.text=self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Object Pool%'""")
+      self.title_label.text=self.db.get_query("""SELECT p_name FROM all_patterns WHERE p_name LIKE 'Adapter%'""")
       self.title_label.pos_hint={'center_y': .5}
       self.title_label.halign='center'
       self.title_label.font_size='25sp'
@@ -97,25 +97,25 @@ class AdapterScreen(Screen):
       self.bk_drop.add_widget(self.desc_label)
       
       self.img = Image(source='code_imgs\\adapter_0.PNG')
-      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.87}
+      self.img.pos_hint={'center_x': 0.5, 'center_y': 0.89}
       self.img.size_hint_y=.7
       self.img.size_hint_x=.7
       self.bk_drop.add_widget(self.img)
             
       self.img_2 = Image(source='code_imgs\\adapter_1.PNG')
-      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.77}
+      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.72}
       self.img_2.size_hint_y=.7
       self.img_2.size_hint_x=.7
       self.bk_drop.add_widget(self.img_2)
 
       self.img_3 = Image(source='code_imgs\\adapter_2.PNG')
-      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.52}
+      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.40}
       self.img_3.size_hint_y=.7
       self.img_3.size_hint_x=.7
       self.bk_drop.add_widget(self.img_3)
 
       self.img_4 = Image(source='code_imgs\\adapter_3.PNG')
-      self.img_4.pos_hint={'center_x': 0.5, 'center_y': 0.32}
+      self.img_4.pos_hint={'center_x': 0.5, 'center_y': 0.10}
       self.img_4.size_hint_y=.7
       self.img_4.size_hint_x=.7
       self.bk_drop.add_widget(self.img_4)
