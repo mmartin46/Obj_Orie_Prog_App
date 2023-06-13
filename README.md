@@ -13,8 +13,9 @@ java design patterns.
 ![](https://i.postimg.cc/63jLbqZc/prototype.png)
 
 
-<img src="https://postimg.cc/CB8qzFmn" width="128"/>
-
+<img src="https://i.postimg.cc/W1w9625W/dp.png" width="100" />
+<img src="" width="100" />
+<img src="" width="100" />
 
 ## Features
 
