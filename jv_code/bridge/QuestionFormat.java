@@ -13,3 +13,4 @@ public class QuestionFormat extends QuestionManager {
       System.out.println("\n-------------------------\n");
    }
 }
+
