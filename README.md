@@ -5,7 +5,7 @@ is meant to help users understand different
 java design patterns.
 
 
-# Code Organization
+## Code Organization
 
 ### jv_code
 Handles the Java code
