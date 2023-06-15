@@ -15,7 +15,7 @@ from screens.builder import *
 from screens.pool import *
 from screens.adapter import *
 from screens.bridge import *
-
+from screens.composite import *
 
 # Used for the icons on the main
 # screen.
@@ -69,6 +69,9 @@ class OOP_Screen(Screen):
       self.bgs_p=ElementCard()
       self.bgs_p.text=str(GetDesignDesc('Bridge').get_name())
       self.bgs_p.fbind('on_press', self.trans_screen, scr='bgs')
+      self.com_p=ElementCard()
+      self.com_p.text=str(GetDesignDesc('Composite').get_name())
+      self.com_p.fbind('on_press', self.trans_screen, scr='com')
       
 
       self.grid.add_widget(self.ov_c)
@@ -80,6 +83,7 @@ class OOP_Screen(Screen):
       self.grid.add_widget(self.op_p)
       self.grid.add_widget(self.ad_p)
       self.grid.add_widget(self.bgs_p)
+      self.grid.add_widget(self.com_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout

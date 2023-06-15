@@ -19,7 +19,7 @@ ScreenManager:
    ObjPoolScreen:
    AdapterScreen:
    BridgeScreen:
-   
+   CompositeScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -51,6 +51,9 @@ ScreenManager:
 <BridgeScreen>
    name: 'bgs'
   
+<CompositeScreen>
+   name: 'com'
+
 <ElementCard@MDCard>:
    id: try
    size_hint_y: None
