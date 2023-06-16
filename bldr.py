@@ -22,6 +22,7 @@ ScreenManager:
    CompositeScreen:
    DecoratorScreen:
    FacadeScreen:
+   FlyWeightScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -61,6 +62,8 @@ ScreenManager:
 
 <FacadeScreen>
    name: 'fac'
+<FlyWeightScreen>
+   name: 'flw'
 
 <ElementCard@MDCard>:
    id: try
