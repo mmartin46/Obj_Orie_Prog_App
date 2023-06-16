@@ -20,6 +20,7 @@ ScreenManager:
    AdapterScreen:
    BridgeScreen:
    CompositeScreen:
+   DecoratorScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -53,6 +54,9 @@ ScreenManager:
   
 <CompositeScreen>
    name: 'com'
+   
+<DecoratorScreen>
+   name: 'dec'
 
 <ElementCard@MDCard>:
    id: try
