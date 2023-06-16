@@ -17,6 +17,7 @@ from screens.adapter import *
 from screens.bridge import *
 from screens.composite import *
 from screens.decorator import *
+from screens.facade import *
 
 # Used for the icons on the main
 # screen.
@@ -77,6 +78,10 @@ class OOP_Screen(Screen):
       self.dec_p.text=str(GetDesignDesc('Decorator').get_name())
       self.dec_p.fbind('on_press', self.trans_screen, scr='dec')
 
+      self.fac_p=ElementCard()
+      self.fac_p.text=str(GetDesignDesc('Facade').get_name())
+      self.fac_p.fbind('on_press', self.trans_screen, scr='fac')
+
       self.grid.add_widget(self.ov_c)
       self.grid.add_widget(self.fp_c)
       self.grid.add_widget(self.ap_c)
@@ -88,6 +93,7 @@ class OOP_Screen(Screen):
       self.grid.add_widget(self.bgs_p)
       self.grid.add_widget(self.com_p)
       self.grid.add_widget(self.dec_p)
+      self.grid.add_widget(self.fac_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout

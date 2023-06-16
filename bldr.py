@@ -21,6 +21,7 @@ ScreenManager:
    BridgeScreen:
    CompositeScreen:
    DecoratorScreen:
+   FacadeScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -57,6 +58,9 @@ ScreenManager:
    
 <DecoratorScreen>
    name: 'dec'
+
+<FacadeScreen>
+   name: 'fac'
 
 <ElementCard@MDCard>:
    id: try
