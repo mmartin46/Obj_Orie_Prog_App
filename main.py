@@ -37,7 +37,7 @@ class OOP_Screen(Screen):
    def on_enter(self, *args):
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1300
+      self.bk_drop.height=1900
 
       # Screen Grid
       self.grid=MDGridLayout()
