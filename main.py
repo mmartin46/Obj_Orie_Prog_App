@@ -19,6 +19,7 @@ from screens.composite import *
 from screens.decorator import *
 from screens.facade import *
 from screens.flyweight import *
+from screens.proxy import *
 
 # Used for the icons on the main
 # screen.
@@ -85,6 +86,10 @@ class OOP_Screen(Screen):
       self.flw_p=ElementCard()
       self.flw_p.text=str(GetDesignDesc('Flyweight').get_name())
       self.flw_p.fbind('on_press', self.trans_screen, scr='flw')
+      
+      self.pro_p=ElementCard()
+      self.pro_p.text=str(GetDesignDesc('Proxy').get_name())
+      self.pro_p.fbind('on_press', self.trans_screen, scr='pro')
 
       self.grid.add_widget(self.ov_c)
       self.grid.add_widget(self.fp_c)
@@ -99,6 +104,7 @@ class OOP_Screen(Screen):
       self.grid.add_widget(self.dec_p)
       self.grid.add_widget(self.fac_p)
       self.grid.add_widget(self.flw_p)
+      self.grid.add_widget(self.pro_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout

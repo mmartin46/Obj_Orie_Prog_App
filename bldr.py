@@ -23,6 +23,7 @@ ScreenManager:
    DecoratorScreen:
    FacadeScreen:
    FlyWeightScreen:
+   ProxyScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -62,8 +63,13 @@ ScreenManager:
 
 <FacadeScreen>
    name: 'fac'
+
 <FlyWeightScreen>
    name: 'flw'
+   
+<ProxyScreen>
+   name: 'pro'   
+   
 
 <ElementCard@MDCard>:
    id: try
