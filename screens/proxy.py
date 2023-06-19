@@ -103,8 +103,8 @@ class ProxyScreen(Screen):
             
       self.img_2 = Image(source='code_imgs\\proxy_1.PNG')
       self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.5}
-      self.img_2.size_hint_y=.6
-      self.img_2.size_hint_x=.6
+      self.img_2.size_hint_y=.8
+      self.img_2.size_hint_x=.8
       self.bk_drop.add_widget(self.img_2)
 
       self.img_3 = Image(source='code_imgs\\proxy_2.PNG')
