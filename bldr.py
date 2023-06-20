@@ -24,6 +24,7 @@ ScreenManager:
    FacadeScreen:
    FlyWeightScreen:
    ProxyScreen:
+   ChainScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -70,6 +71,8 @@ ScreenManager:
 <ProxyScreen>
    name: 'pro'   
    
+<ChainScreen>
+   name: 'chs'
 
 <ElementCard@MDCard>:
    id: try

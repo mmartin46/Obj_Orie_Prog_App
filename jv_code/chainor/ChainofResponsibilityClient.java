@@ -1,4 +1,6 @@
 
+
+
 public class ChainofResponsibilityClient {
    private static Logger doChaining() {
       Logger consoleLogger = new ConsoleBasedLogger(Logger.OUTPUTINFO);

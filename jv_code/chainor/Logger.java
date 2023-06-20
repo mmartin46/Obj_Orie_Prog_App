@@ -1,3 +1,4 @@
+
 // Create a Logger abstract class
 public abstract class Logger {
    public static int OUTPUTINFO = 1;
@@ -23,3 +24,4 @@ public abstract class Logger {
 
    protected abstract void displayLogInfo(String msg);
 }
+

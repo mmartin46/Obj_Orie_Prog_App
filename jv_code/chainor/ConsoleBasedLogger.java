@@ -1,3 +1,5 @@
+
+
 // Create a ConsoleBasedLogger class.
 public class ConsoleBasedLogger extends Logger {
    public ConsoleBasedLogger(int levels) {
