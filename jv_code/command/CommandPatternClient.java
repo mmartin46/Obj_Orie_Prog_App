@@ -1,5 +1,8 @@
 package command;
 
+
+// Create a CommandPatternClient
+// class that will act as a client.
 public class CommandPatternClient {
    public static void main(String[] args) {
       Document doc = new Document();

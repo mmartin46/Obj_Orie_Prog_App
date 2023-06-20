@@ -1,5 +1,6 @@
 package command;
 
+
 // Create a Document class that will act as
 // a Receiver.
 public class Document {
