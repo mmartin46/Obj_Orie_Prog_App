@@ -21,6 +21,7 @@ from screens.facade import *
 from screens.flyweight import *
 from screens.proxy import *
 from screens.chain import *
+from screens.command import *
 
 # Used for the icons on the main
 # screen.
@@ -95,7 +96,11 @@ class OOP_Screen(Screen):
       self.cr_p=ElementCard()
       self.cr_p.text=str(GetDesignDesc('Chain').get_name())
       self.cr_p.fbind('on_press', self.trans_screen, scr='chs')
-
+      
+      self.cm_p=ElementCard()
+      self.cm_p.text=str(GetDesignDesc('Command').get_name())
+      self.cm_p.fbind('on_press', self.trans_screen, scr='cmd')
+ 
 
       self.grid.add_widget(self.ov_c)
       self.grid.add_widget(self.fp_c)
@@ -112,6 +117,7 @@ class OOP_Screen(Screen):
       self.grid.add_widget(self.flw_p)
       self.grid.add_widget(self.pro_p)
       self.grid.add_widget(self.cr_p)
+      self.grid.add_widget(self.cm_p)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout

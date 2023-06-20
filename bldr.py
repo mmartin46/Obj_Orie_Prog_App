@@ -25,6 +25,7 @@ ScreenManager:
    FlyWeightScreen:
    ProxyScreen:
    ChainScreen:
+   CommandScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -73,7 +74,10 @@ ScreenManager:
    
 <ChainScreen>
    name: 'chs'
-
+   
+<CommandScreen> 
+   name: 'cmd'
+   
 <ElementCard@MDCard>:
    id: try
    size_hint_y: None
