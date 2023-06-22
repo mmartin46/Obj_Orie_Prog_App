@@ -22,6 +22,7 @@ from screens.flyweight import *
 from screens.proxy import *
 from screens.chain import *
 from screens.command import *
+from screens.interpreter import *
 
 # Used for the icons on the main
 # screen.
@@ -100,24 +101,33 @@ class OOP_Screen(Screen):
       self.cm_p=ElementCard()
       self.cm_p.text=str(GetDesignDesc('Command').get_name())
       self.cm_p.fbind('on_press', self.trans_screen, scr='cmd')
+      
+      self.it_p=ElementCard()
+      self.it_p.text=str(GetDesignDesc('Interpreter').get_name())
+      self.it_p.fbind('on_press', self.trans_screen, scr='its')
  
 
-      self.grid.add_widget(self.ov_c)
-      self.grid.add_widget(self.fp_c)
-      self.grid.add_widget(self.ap_c)
-      self.grid.add_widget(self.sp_c)
-      self.grid.add_widget(self.pp_c)
-      self.grid.add_widget(self.bp_c)
-      self.grid.add_widget(self.op_p)
-      self.grid.add_widget(self.ad_p)
-      self.grid.add_widget(self.bgs_p)
-      self.grid.add_widget(self.com_p)
-      self.grid.add_widget(self.dec_p)
-      self.grid.add_widget(self.fac_p)
-      self.grid.add_widget(self.flw_p)
-      self.grid.add_widget(self.pro_p)
-      self.grid.add_widget(self.cr_p)
-      self.grid.add_widget(self.cm_p)
+      functions = [
+         self.ov_c,
+         self.fp_c,
+         self.ap_c,
+         self.pp_c,
+         self.bp_c,
+         self.op_p,
+         self.ad_p,
+         self.bgs_p,
+         self.com_p,
+         self.dec_p,
+         self.fac_p,
+         self.flw_p,
+         self.pro_p,
+         self.cr_p,
+         self.cm_p,
+         self.it_p
+      ]
+      
+      for f in functions:
+         self.grid.add_widget(f)
       self.bk_drop.add_widget(self.grid)
 
       # Title Layout

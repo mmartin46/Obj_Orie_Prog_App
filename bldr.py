@@ -26,6 +26,7 @@ ScreenManager:
    ProxyScreen:
    ChainScreen:
    CommandScreen:
+   InterpreterScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -77,6 +78,9 @@ ScreenManager:
    
 <CommandScreen> 
    name: 'cmd'
+   
+<InterpreterScreen>   
+   name: 'its'
    
 <ElementCard@MDCard>:
    id: try
