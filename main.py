@@ -24,6 +24,9 @@ from screens.chain import *
 from screens.command import *
 from screens.interpreter import *
 
+d = Database()
+print(d.get_listed_query("""select p_name from all_patterns"""))
+
 # Used for the icons on the main
 # screen.
 class ElementCard(MDCard):
@@ -48,6 +51,7 @@ class OOP_Screen(Screen):
       self.grid.cols=2
       self.grid.padding=dp(15)
       self.grid.spacing=dp(15)
+
 
       self.ov_c=ElementCard()
       self.ov_c.text='Overview'

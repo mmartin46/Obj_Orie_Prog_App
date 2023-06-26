@@ -23,3 +23,15 @@ class Database():
       query = str(query).replace("(", "").replace(")", "")
       query = query.replace("[", "").replace("]", "").replace("'", "")
       return query.rstrip(query[-1])
+   
+   def get_listed_query(self, query):
+      self.c.execute(query)
+      query = list(self.c.fetchall())
+      query = str(query).replace("(", "").replace(",)", "")
+      return query
+   
+   def get_reg_query(self, query):
+      print(query)
+      self.c.execute(query)
+      query = self.c.fetchall()
+      return query
