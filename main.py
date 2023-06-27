@@ -110,6 +110,8 @@ class OOP_Screen(Screen):
       self.it_p.text=str(GetDesignDesc('Interpreter').get_name())
       self.it_p.fbind('on_press', self.trans_screen, scr='its')
  
+      print(self.ids)
+
 
       functions = [
          self.ov_c,
