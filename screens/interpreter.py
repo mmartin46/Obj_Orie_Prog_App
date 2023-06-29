@@ -102,19 +102,19 @@ class InterpreterScreen(Screen):
       self.bk_drop.add_widget(self.img)
             
       self.img_2 = Image(source='code_imgs\\interpreter_1.PNG')
-      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.78}
+      self.img_2.pos_hint={'center_x': 0.5, 'center_y': 0.72}
       self.img_2.size_hint_y=.6
       self.img_2.size_hint_x=.6
       self.bk_drop.add_widget(self.img_2)
 
       self.img_3 = Image(source='code_imgs\\interpreter_2.PNG')
-      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.63}
+      self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.50}
       self.img_3.size_hint_y=.8
       self.img_3.size_hint_x=.8
       self.bk_drop.add_widget(self.img_3)
 
       self.img_4 = Image(source='code_imgs\\interpreter_3.PNG')
-      self.img_4.pos_hint={'center_x': 0.5, 'center_y': 0.43}
+      self.img_4.pos_hint={'center_x': 0.5, 'center_y': 0.15}
       self.img_4.size_hint_y=.8
       self.img_4.size_hint_x=.8
       self.bk_drop.add_widget(self.img_4)
