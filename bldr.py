@@ -27,6 +27,7 @@ ScreenManager:
    ChainScreen:
    CommandScreen:
    InterpreterScreen:
+   IteratorScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -81,6 +82,9 @@ ScreenManager:
    
 <InterpreterScreen>   
    name: 'its'
+   
+<IteratorScreen>
+   name: 'itr'
    
 <ElementCard@MDCard>:
    id: try

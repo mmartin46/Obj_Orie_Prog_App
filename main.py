@@ -23,6 +23,7 @@ from screens.proxy import *
 from screens.chain import *
 from screens.command import *
 from screens.interpreter import *
+from screens.iterator import *
 
 d = Database()
 print(d.get_listed_query("""select p_name from all_patterns"""))
@@ -109,6 +110,10 @@ class OOP_Screen(Screen):
       self.it_p=ElementCard()
       self.it_p.text=str(GetDesignDesc('Interpreter').get_name())
       self.it_p.fbind('on_press', self.trans_screen, scr='its')
+      
+      self.it_r=ElementCard()
+      self.it_r.text=str(GetDesignDesc('Iterator').get_name())
+      self.it_r.fbind('on_press', self.trans_screen, scr='itr')
  
       print(self.ids)
 
@@ -129,7 +134,8 @@ class OOP_Screen(Screen):
          self.pro_p,
          self.cr_p,
          self.cm_p,
-         self.it_p
+         self.it_p,
+         self.it_r
       ]
       
       for f in functions:
