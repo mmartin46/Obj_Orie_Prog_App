@@ -2,10 +2,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// Create a ApnaChatRoomlml class that will implement ApnaChatRoom
+// Create a ApnaChatRoomlmpl class that will implement ApnaChatRoom
 // interface and will also use the # of participants involved in chatting
 // through Participant interface.
-public class ApnaChatRoomlml implements ApnaChatRoom {
+public class ApnaChatRoomlmpl implements ApnaChatRoom {
    DateFormat dateFormat = new SimpleDateFormat("E dd-MM-yyyy hh:mm a");
    Date date = new Date();
    @Override
@@ -14,3 +14,4 @@ public class ApnaChatRoomlml implements ApnaChatRoom {
       System.out.println("\t\t\t\t" + "[" + dateFormat.format(date).toString() + "]");
    }
 }
+

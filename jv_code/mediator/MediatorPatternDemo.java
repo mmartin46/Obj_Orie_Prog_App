@@ -1,7 +1,7 @@
 public class MediatorPatternDemo {
    public static void main(String args[])
    {
-      ApnaChatRoom chat = new ApnaChatRoomlml();
+      ApnaChatRoom chat = new ApnaChatRoomlmpl();
       User1 u1 = new User1(chat);
       u1.setname("John");
       u1.sendMsg("Hey John!");
