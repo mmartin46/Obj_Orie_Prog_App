@@ -11,3 +11,4 @@ public class MediatorPatternDemo {
       u2.sendMsg("How are you?");
    }  
 }
+

@@ -24,3 +24,4 @@ public class User2 extends Participant {
       this.chat = chat;
    }
 }
+
