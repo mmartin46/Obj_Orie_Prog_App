@@ -25,6 +25,7 @@ from screens.command import *
 from screens.interpreter import *
 from screens.iterator import *
 from screens.mediator import *
+from screens.memento import *
 
 d = Database()
 print(d.get_listed_query("""select p_name from all_patterns"""))
@@ -120,6 +121,9 @@ class OOP_Screen(Screen):
       self.med_r.text=str(GetDesignDesc('Mediator').get_name())
       self.med_r.fbind('on_press', self.trans_screen, scr='med')
 
+      self.mem_r=ElementCard()
+      self.mem_r.text=str(GetDesignDesc('Memento').get_name())
+      self.mem_r.fbind('on_press', self.trans_screen, scr='mem')
 
 
       functions = [
@@ -140,7 +144,8 @@ class OOP_Screen(Screen):
          self.cm_p,
          self.it_p,
          self.it_r,
-         self.med_r
+         self.med_r,
+         self.mem_r
       ]
       
       for f in functions:

@@ -1,7 +1,5 @@
 package memento;
 
-import javax.lang.model.util.Elements.Origin;
-
 public class MementoPatternDemo {
    public static void main(String[] args) {
       Originator originator = new Originator();

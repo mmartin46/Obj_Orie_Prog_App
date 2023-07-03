@@ -29,6 +29,7 @@ ScreenManager:
    InterpreterScreen:
    IteratorScreen:
    MediatorScreen:
+   MementoScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -89,6 +90,9 @@ ScreenManager:
    
 <MediatorScreen>
    name: 'med'
+
+<MementoScreen>
+   name: 'mem'
    
 <ElementCard@MDCard>:
    id: try
