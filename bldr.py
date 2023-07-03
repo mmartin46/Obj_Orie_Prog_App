@@ -28,6 +28,7 @@ ScreenManager:
    CommandScreen:
    InterpreterScreen:
    IteratorScreen:
+   MediatorScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -85,6 +86,9 @@ ScreenManager:
    
 <IteratorScreen>
    name: 'itr'
+   
+<MediatorScreen>
+   name: 'med'
    
 <ElementCard@MDCard>:
    id: try
