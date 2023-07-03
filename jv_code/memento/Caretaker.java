@@ -17,3 +17,4 @@ public class Caretaker {
       return mementoList.get(index);
    }
 }
+
