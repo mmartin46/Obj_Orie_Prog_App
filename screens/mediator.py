@@ -10,7 +10,7 @@ class MediatorScreen(Screen):
       # Backdrop
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1600
+      self.bk_drop.height=2200
       self.db = Database()
 
       # Title Layout
@@ -109,26 +109,26 @@ class MediatorScreen(Screen):
 
       self.img_3 = Image(source='code_imgs\\mediator_2.PNG')
       self.img_3.pos_hint={'center_x': 0.5, 'center_y': 0.63}
-      self.img_3.size_hint_y=.6
-      self.img_3.size_hint_x=.6
+      self.img_3.size_hint_y=.8
+      self.img_3.size_hint_x=.8
       self.bk_drop.add_widget(self.img_3)
 
       self.img_4 = Image(source='code_imgs\\mediator_3.PNG')
       self.img_4.pos_hint={'center_x': 0.5, 'center_y': 0.43}
-      self.img_4.size_hint_y=.6
-      self.img_4.size_hint_x=.6
+      self.img_4.size_hint_y=.8
+      self.img_4.size_hint_x=.8
       self.bk_drop.add_widget(self.img_4)
 
       self.img_5 = Image(source='code_imgs\\mediator_4.PNG')
       self.img_5.pos_hint={'center_x': 0.5, 'center_y': 0.20}
-      self.img_5.size_hint_y=.4
-      self.img_5.size_hint_x=.4
+      self.img_5.size_hint_y=.6
+      self.img_5.size_hint_x=.6
       self.bk_drop.add_widget(self.img_5)
       
       self.img_6 = Image(source='code_imgs\\mediator_5.PNG')
       self.img_6.pos_hint={'center_x': 0.5, 'center_y': 0.05}
-      self.img_6.size_hint_y=.4
-      self.img_6.size_hint_x=.4
+      self.img_6.size_hint_y=.6
+      self.img_6.size_hint_x=.6
       self.bk_drop.add_widget(self.img_6)
 
       OFFSET=1.2
