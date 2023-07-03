@@ -1,6 +1,7 @@
 // Create a User2 class that will extend Participant
 // abstract class and will use the ApnaChatRoom interface.
 public class User2 extends Participant {
+
    private String name;
    private ApnaChatRoom chat;
 
@@ -17,5 +18,9 @@ public class User2 extends Participant {
    @Override
    public String getName() {
       return name;
+   }
+
+   public User2(ApnaChatRoom chat) {
+      this.chat = chat;
    }
 }
