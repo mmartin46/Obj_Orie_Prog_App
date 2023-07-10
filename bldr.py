@@ -30,6 +30,7 @@ ScreenManager:
    IteratorScreen:
    MediatorScreen:
    MementoScreen:
+   ObserverScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -93,6 +94,9 @@ ScreenManager:
 
 <MementoScreen>
    name: 'mem'
+   
+<ObserverScreen>
+   name: 'obj'
    
 <ElementCard@MDCard>:
    id: try

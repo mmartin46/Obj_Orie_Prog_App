@@ -7,3 +7,5 @@ public interface Subject {
 
    public Object getUpdate(Observer obj);
 }
+
+

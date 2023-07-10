@@ -12,7 +12,6 @@ public class MyTopic implements Subject {
    public MyTopic() {
       this.observers = new ArrayList<>();
    }
-
    @Override
    public void register(Observer obj) {
       if (obj == null)
@@ -24,19 +23,17 @@ public class MyTopic implements Subject {
          observers.remove(obj);
       }
    }
-
    @Override
    public void unregister(Observer obj) {
       synchronized (MUTEX) {
          observers.remove(obj);
       }
    }
-
    @Override
    public void notifyObservers() {
       List<Observer> observersLocal = null;
-      // synchronization is used to make sure any observer registered
-      // after message is 
+      // synchronization is used to make sure the notification
+      // is sent to observers registered before the message is published
       synchronized (MUTEX) {
          if (!changed)
             return;
@@ -48,12 +45,10 @@ public class MyTopic implements Subject {
          obj.update();
       }
    }
-
    @Override
    public Object getUpdate(Observer obj) {
       return this.message;
    }
-
    public void postMessage(String msg) {
       System.out.println("Message Posted to Topic:" + msg);
       this.message=msg;

@@ -26,6 +26,7 @@ from screens.interpreter import *
 from screens.iterator import *
 from screens.mediator import *
 from screens.memento import *
+from screens.observer import *
 
 d = Database()
 print(d.get_listed_query("""select p_name from all_patterns"""))
@@ -46,7 +47,7 @@ class OOP_Screen(Screen):
    def on_enter(self, *args):
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1900
+      self.bk_drop.height=2300
 
       # Screen Grid
       self.grid=MDGridLayout()
@@ -125,6 +126,10 @@ class OOP_Screen(Screen):
       self.mem_r.text=str(GetDesignDesc('Memento').get_name())
       self.mem_r.fbind('on_press', self.trans_screen, scr='mem')
 
+      self.obj_m=ElementCard()
+      self.obj_m.text=str(GetDesignDesc('Observer').get_name())
+      self.obj_m.fbind('on_press', self.trans_screen, scr='obj')
+
 
       functions = [
          self.ov_c,
@@ -145,7 +150,8 @@ class OOP_Screen(Screen):
          self.it_p,
          self.it_r,
          self.med_r,
-         self.mem_r
+         self.mem_r,
+         self.obj_m
       ]
       
       for f in functions:
