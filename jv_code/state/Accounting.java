@@ -8,7 +8,7 @@ public class Accounting implements Connection {
 
     @Override
     public void close() {
-        System.out.println("close the database")
+        System.out.println("close the database");
     }
     @Override
     public void log() {
