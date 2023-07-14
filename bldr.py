@@ -31,6 +31,7 @@ ScreenManager:
    MediatorScreen:
    MementoScreen:
    ObserverScreen:
+   StateScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -97,6 +98,9 @@ ScreenManager:
    
 <ObserverScreen>
    name: 'obj'
+
+<StateScreen>
+   name: 'ste'
    
 <ElementCard@MDCard>:
    id: try
