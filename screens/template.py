@@ -10,7 +10,7 @@ class TemplateScreen(Screen):
       # Backdrop
       self.bk_drop = MDFloatLayout()
       self.bk_drop.size_hint_y=None
-      self.bk_drop.height=1700
+      self.bk_drop.height=1800
       self.db = Database()
 
       # Title Layout
@@ -114,7 +114,7 @@ class TemplateScreen(Screen):
       self.bk_drop.add_widget(self.img_3)
 
       self.img_4 = Image(source='code_imgs\\template_3.PNG')
-      self.img_4.pos_hint={'center_x': 0.5, 'center_y': .36}
+      self.img_4.pos_hint={'center_x': 0.5, 'center_y': .26}
       self.img_4.size_hint_y=.8
       self.img_4.size_hint_x=.8
       self.bk_drop.add_widget(self.img_4)
