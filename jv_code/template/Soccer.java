@@ -1,5 +1,6 @@
 package jv_code.template;
-
+// Create a Soccer class that extends the Game abstract class
+// for giving the definition of its method.
 public class Soccer extends Game {
     @Override
     void intialize() {

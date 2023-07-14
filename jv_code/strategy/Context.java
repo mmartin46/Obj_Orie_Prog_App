@@ -1,5 +1,8 @@
 package strategy;
 
+// Create a Context class that will ask
+// from Strategy interface
+// to execute the type of strategy.
 public class Context {
     private Strategy strategy;
     
@@ -11,3 +14,4 @@ public class Context {
         return strategy.calculation(num1, num2);
     }
 }
+

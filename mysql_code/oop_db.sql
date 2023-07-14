@@ -60,21 +60,23 @@ INSERT INTO all_patterns VALUES
 	('Template Pattern', 'The Template Pattern says to define the skeleion of a function in an operation, deferring some subclasses.', 'BEHAVIORAL');
 
 /* Returns the description. */
+DELIMITER //
 CREATE PROCEDURE getDescription(IN descr VARCHAR(60))
 BEGIN
-	SELECT p_desc FROM all_patterns
-	WHERE p_name LIKE descr;
-END;
+	SELECT p_desc FROM all_patterns WHERE p_name LIKE descr;
+END //
+DELIMITER ;
 
 CALL getDescription('Singleton Design Pattern');
 
 /* Returns all patterns based on the type. */
+
+DELIMITER //
 CREATE PROCEDURE designPattern(IN patt VARCHAR(60))
 BEGIN
 	SELECT all_patterns.* FROM design_patterns
 	INNER JOIN all_patterns ON design_patterns.m_type = all_patterns.m_type
 	WHERE design_patterns.m_type = 'STRUCTURAL';
-END;
-
-
+END // 
+DELIMITER ;
 
