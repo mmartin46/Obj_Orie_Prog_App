@@ -33,6 +33,7 @@ ScreenManager:
    ObserverScreen:
    StateScreen:
    StrategyScreen:
+   TemplateScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -105,6 +106,9 @@ ScreenManager:
 
 <StrategyScreen>
    name: 'stg'
+
+<TemplateScreen>
+   name: 'tmp'
    
 <ElementCard@MDCard>:
    id: try

@@ -29,6 +29,7 @@ from screens.memento import *
 from screens.observer import *
 from screens.state import *
 from screens.strategy import *
+from screens.template import *
 
 d = Database()
 print(d.get_listed_query("""select p_name from all_patterns"""))
@@ -140,6 +141,10 @@ class OOP_Screen(Screen):
       self.stg_m.text=str(GetDesignDesc('Strategy').get_name())
       self.stg_m.fbind('on_press', self.trans_screen, scr='stg')
 
+      self.tmp_m=ElementCard()
+      self.tmp_m.text=str(GetDesignDesc('Template').get_name())
+      self.tmp_m.fbind('on_press', self.trans_screen, scr='tmp')
+
       functions = [
          self.ov_c,
          self.fp_c,
@@ -162,7 +167,8 @@ class OOP_Screen(Screen):
          self.mem_r,
          self.obj_m,
          self.st_m,
-         self.stg_m
+         self.stg_m,
+         self.tmp_m
       ]
       
       for f in functions:
