@@ -32,6 +32,7 @@ ScreenManager:
    MementoScreen:
    ObserverScreen:
    StateScreen:
+   StrategyScreen:
    
 <OverviewScreen>
    name: 'main'
@@ -101,6 +102,9 @@ ScreenManager:
 
 <StateScreen>
    name: 'ste'
+
+<StrategyScreen>
+   name: 'stg'
    
 <ElementCard@MDCard>:
    id: try
