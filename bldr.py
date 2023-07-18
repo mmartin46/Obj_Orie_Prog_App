@@ -9,8 +9,8 @@ COLOR_1 = { 0/255, 72/255, 186/255, 1 }
 app_build = """
 
 ScreenManager:
-   OverviewScreen:
    OOP_Screen:
+   OverviewScreen:
    FactoryScreen:
    AbstractScreen:
    SingletonScreen:
